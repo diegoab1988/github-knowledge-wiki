@@ -17,6 +17,33 @@
       "branch": "main",
       "description": "A curated list of awesome Go frameworks, libraries and software",
       "enabled": true
+    },
+    {
+      "id": "sindresorhus-awesome",
+      "name": "Awesome",
+      "owner": "sindresorhus",
+      "repository": "awesome",
+      "branch": "main",
+      "description": "😎 Awesome lists about all kinds of interesting topics [NOTE: Pull requests are temporarily disabled until I have a chance to catch up with the existing ones]",
+      "enabled": true
+    },
+    {
+      "id": "public-apis-public-apis",
+      "name": "Public Apis",
+      "owner": "public-apis",
+      "repository": "public-apis",
+      "branch": "master",
+      "description": "A collective list of free APIs",
+      "enabled": true
+    },
+    {
+      "id": "ebookfoundation-free-programming-books",
+      "name": "Free Programming Books",
+      "owner": "EbookFoundation",
+      "repository": "free-programming-books",
+      "branch": "main",
+      "description": ":books: Freely available programming books",
+      "enabled": true
     }
   ]
 }

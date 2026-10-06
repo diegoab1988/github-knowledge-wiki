@@ -28,17 +28,6 @@
     ]
   },
   {
-    "name": "Actual middlewares",
-    "slug": "actual-middlewares",
-    "count": 13,
-    "languages": [
-      "Go"
-    ],
-    "sources": [
-      "Awesome Go"
-    ]
-  },
-  {
     "name": "Advanced Console UIs",
     "slug": "advanced-console-uis",
     "count": 45,
@@ -59,6 +48,60 @@
     ],
     "sources": [
       "Build Your Own X"
+    ]
+  },
+  {
+    "name": "Animals",
+    "slug": "animals",
+    "count": 24,
+    "languages": [],
+    "sources": [
+      "Public Apis"
+    ]
+  },
+  {
+    "name": "Anime",
+    "slug": "anime",
+    "count": 19,
+    "languages": [],
+    "sources": [
+      "Public Apis"
+    ]
+  },
+  {
+    "name": "Anti-Malware",
+    "slug": "anti-malware",
+    "count": 18,
+    "languages": [],
+    "sources": [
+      "Public Apis"
+    ]
+  },
+  {
+    "name": "APILayer APIs",
+    "slug": "apilayer-apis",
+    "count": 10,
+    "languages": [],
+    "sources": [
+      "Public Apis"
+    ]
+  },
+  {
+    "name": "APIs Covered Under APILayer Suite!",
+    "slug": "apis-covered-under-apilayer-suite",
+    "count": 9,
+    "languages": [],
+    "sources": [
+      "Public Apis"
+    ]
+  },
+  {
+    "name": "Art & Design",
+    "slug": "art-design",
+    "count": 36,
+    "languages": [],
+    "sources": [
+      "Public Apis"
     ]
   },
   {
@@ -96,6 +139,15 @@
     ]
   },
   {
+    "name": "Back-End Development",
+    "slug": "back-end-development",
+    "count": 32,
+    "languages": [],
+    "sources": [
+      "Awesome"
+    ]
+  },
+  {
     "name": "Benchmarks",
     "slug": "benchmarks",
     "count": 15,
@@ -104,6 +156,15 @@
     ],
     "sources": [
       "Awesome Go"
+    ]
+  },
+  {
+    "name": "Big Data",
+    "slug": "big-data",
+    "count": 9,
+    "languages": [],
+    "sources": [
+      "Awesome"
     ]
   },
   {
@@ -146,12 +207,13 @@
   {
     "name": "Blockchain",
     "slug": "blockchain",
-    "count": 13,
+    "count": 30,
     "languages": [
       "Go"
     ],
     "sources": [
-      "Awesome Go"
+      "Awesome Go",
+      "Public Apis"
     ]
   },
   {
@@ -184,6 +246,16 @@
     ],
     "sources": [
       "Awesome Go"
+    ]
+  },
+  {
+    "name": "Books",
+    "slug": "books",
+    "count": 33,
+    "languages": [],
+    "sources": [
+      "Awesome",
+      "Public Apis"
     ]
   },
   {
@@ -224,6 +296,16 @@
     ]
   },
   {
+    "name": "Business",
+    "slug": "business",
+    "count": 52,
+    "languages": [],
+    "sources": [
+      "Awesome",
+      "Public Apis"
+    ]
+  },
+  {
     "name": "Caches",
     "slug": "caches",
     "count": 31,
@@ -232,6 +314,24 @@
     ],
     "sources": [
       "Awesome Go"
+    ]
+  },
+  {
+    "name": "Calendar",
+    "slug": "calendar",
+    "count": 19,
+    "languages": [],
+    "sources": [
+      "Public Apis"
+    ]
+  },
+  {
+    "name": "Cloud Storage & File Sharing",
+    "slug": "cloud-storage-file-sharing",
+    "count": 19,
+    "languages": [],
+    "sources": [
+      "Public Apis"
     ]
   },
   {
@@ -261,6 +361,15 @@
     ]
   },
   {
+    "name": "Computer Science",
+    "slug": "computer-science",
+    "count": 38,
+    "languages": [],
+    "sources": [
+      "Awesome"
+    ]
+  },
+  {
     "name": "Conferences",
     "slug": "conferences",
     "count": 15,
@@ -283,14 +392,44 @@
     ]
   },
   {
+    "name": "Content Management Systems",
+    "slug": "content-management-systems",
+    "count": 11,
+    "languages": [],
+    "sources": [
+      "Awesome"
+    ]
+  },
+  {
     "name": "Continuous Integration",
     "slug": "continuous-integration",
-    "count": 17,
+    "count": 22,
+    "languages": [
+      "Go"
+    ],
+    "sources": [
+      "Awesome Go",
+      "Public Apis"
+    ]
+  },
+  {
+    "name": "Criação de HTTP middlewares",
+    "slug": "criacao-de-http-middlewares",
+    "count": 11,
     "languages": [
       "Go"
     ],
     "sources": [
       "Awesome Go"
+    ]
+  },
+  {
+    "name": "Cryptocurrency",
+    "slug": "cryptocurrency",
+    "count": 90,
+    "languages": [],
+    "sources": [
+      "Public Apis"
     ]
   },
   {
@@ -302,6 +441,15 @@
     ],
     "sources": [
       "Awesome Go"
+    ]
+  },
+  {
+    "name": "Currency Exchange",
+    "slug": "currency-exchange",
+    "count": 27,
+    "languages": [],
+    "sources": [
+      "Public Apis"
     ]
   },
   {
@@ -324,6 +472,15 @@
     ],
     "sources": [
       "Awesome Go"
+    ]
+  },
+  {
+    "name": "Data Validation",
+    "slug": "data-validation",
+    "count": 15,
+    "languages": [],
+    "sources": [
+      "Public Apis"
     ]
   },
   {
@@ -369,6 +526,15 @@
     ]
   },
   {
+    "name": "Databases",
+    "slug": "databases",
+    "count": 17,
+    "languages": [],
+    "sources": [
+      "Awesome"
+    ]
+  },
+  {
     "name": "Databases Implemented in Go",
     "slug": "databases-implemented-in-go",
     "count": 52,
@@ -391,6 +557,15 @@
     ]
   },
   {
+    "name": "Decentralized Systems",
+    "slug": "decentralized-systems",
+    "count": 17,
+    "languages": [],
+    "sources": [
+      "Awesome"
+    ]
+  },
+  {
     "name": "Dependency Injection",
     "slug": "dependency-injection",
     "count": 27,
@@ -402,6 +577,24 @@
     ]
   },
   {
+    "name": "Development",
+    "slug": "development",
+    "count": 203,
+    "languages": [],
+    "sources": [
+      "Public Apis"
+    ]
+  },
+  {
+    "name": "Development Environment",
+    "slug": "development-environment",
+    "count": 21,
+    "languages": [],
+    "sources": [
+      "Awesome"
+    ]
+  },
+  {
     "name": "DevOps Tools",
     "slug": "devops-tools",
     "count": 111,
@@ -410,6 +603,15 @@
     ],
     "sources": [
       "Awesome Go"
+    ]
+  },
+  {
+    "name": "Dictionaries",
+    "slug": "dictionaries",
+    "count": 16,
+    "languages": [],
+    "sources": [
+      "Public Apis"
     ]
   },
   {
@@ -437,6 +639,15 @@
     ],
     "sources": [
       "Build Your Own X"
+    ]
+  },
+  {
+    "name": "Documents & Productivity",
+    "slug": "documents-productivity",
+    "count": 47,
+    "languages": [],
+    "sources": [
+      "Public Apis"
     ]
   },
   {
@@ -473,14 +684,24 @@
     ]
   },
   {
+    "name": "Editors",
+    "slug": "editors",
+    "count": 5,
+    "languages": [],
+    "sources": [
+      "Awesome"
+    ]
+  },
+  {
     "name": "Email",
     "slug": "email",
-    "count": 27,
+    "count": 60,
     "languages": [
       "Go"
     ],
     "sources": [
-      "Awesome Go"
+      "Awesome Go",
+      "Public Apis"
     ]
   },
   {
@@ -511,6 +732,25 @@
     ]
   },
   {
+    "name": "Entertainment",
+    "slug": "entertainment",
+    "count": 23,
+    "languages": [],
+    "sources": [
+      "Awesome",
+      "Public Apis"
+    ]
+  },
+  {
+    "name": "Environment",
+    "slug": "environment",
+    "count": 25,
+    "languages": [],
+    "sources": [
+      "Public Apis"
+    ]
+  },
+  {
     "name": "Error Handling",
     "slug": "error-handling",
     "count": 21,
@@ -519,6 +759,16 @@
     ],
     "sources": [
       "Awesome Go"
+    ]
+  },
+  {
+    "name": "Events",
+    "slug": "events",
+    "count": 7,
+    "languages": [],
+    "sources": [
+      "Awesome",
+      "Public Apis"
     ]
   },
   {
@@ -544,6 +794,15 @@
     ]
   },
   {
+    "name": "Finance",
+    "slug": "finance",
+    "count": 88,
+    "languages": [],
+    "sources": [
+      "Public Apis"
+    ]
+  },
+  {
     "name": "Financial",
     "slug": "financial",
     "count": 40,
@@ -552,6 +811,15 @@
     ],
     "sources": [
       "Awesome Go"
+    ]
+  },
+  {
+    "name": "Food & Drink",
+    "slug": "food-drink",
+    "count": 33,
+    "languages": [],
+    "sources": [
+      "Public Apis"
     ]
   },
   {
@@ -585,6 +853,15 @@
     ],
     "sources": [
       "Awesome Go"
+    ]
+  },
+  {
+    "name": "Front-End Development",
+    "slug": "front-end-development",
+    "count": 85,
+    "languages": [],
+    "sources": [
+      "Awesome"
     ]
   },
   {
@@ -652,6 +929,24 @@
     ]
   },
   {
+    "name": "Games & Comics",
+    "slug": "games-comics",
+    "count": 108,
+    "languages": [],
+    "sources": [
+      "Public Apis"
+    ]
+  },
+  {
+    "name": "Gaming",
+    "slug": "gaming",
+    "count": 28,
+    "languages": [],
+    "sources": [
+      "Awesome"
+    ]
+  },
+  {
     "name": "Generators",
     "slug": "generators",
     "count": 17,
@@ -660,6 +955,15 @@
     ],
     "sources": [
       "Awesome Go"
+    ]
+  },
+  {
+    "name": "Geocoding",
+    "slug": "geocoding",
+    "count": 107,
+    "languages": [],
+    "sources": [
+      "Public Apis"
     ]
   },
   {
@@ -743,6 +1047,15 @@
     ]
   },
   {
+    "name": "Government",
+    "slug": "government",
+    "count": 118,
+    "languages": [],
+    "sources": [
+      "Public Apis"
+    ]
+  },
+  {
     "name": "GUI",
     "slug": "gui",
     "count": 31,
@@ -767,12 +1080,31 @@
   {
     "name": "Hardware",
     "slug": "hardware",
-    "count": 9,
+    "count": 20,
     "languages": [
       "Go"
     ],
     "sources": [
+      "Awesome",
       "Awesome Go"
+    ]
+  },
+  {
+    "name": "Health",
+    "slug": "health",
+    "count": 42,
+    "languages": [],
+    "sources": [
+      "Public Apis"
+    ]
+  },
+  {
+    "name": "Health and Social Science",
+    "slug": "health-and-social-science",
+    "count": 12,
+    "languages": [],
+    "sources": [
+      "Awesome"
     ]
   },
   {
@@ -842,6 +1174,15 @@
     ]
   },
   {
+    "name": "Jobs",
+    "slug": "jobs",
+    "count": 32,
+    "languages": [],
+    "sources": [
+      "Public Apis"
+    ]
+  },
+  {
     "name": "JSON",
     "slug": "json",
     "count": 41,
@@ -864,14 +1205,21 @@
     ]
   },
   {
-    "name": "Libraries for creating HTTP middlewares",
-    "slug": "libraries-for-creating-http-middlewares",
-    "count": 11,
-    "languages": [
-      "Go"
-    ],
+    "name": "Learn",
+    "slug": "learn",
+    "count": 15,
+    "languages": [],
     "sources": [
-      "Awesome Go"
+      "Awesome"
+    ]
+  },
+  {
+    "name": "Learn more about Public APIs",
+    "slug": "learn-more-about-public-apis",
+    "count": 3,
+    "languages": [],
+    "sources": [
+      "Public Apis"
     ]
   },
   {
@@ -888,12 +1236,13 @@
   {
     "name": "Machine Learning",
     "slug": "machine-learning",
-    "count": 41,
+    "count": 90,
     "languages": [
       "Go"
     ],
     "sources": [
-      "Awesome Go"
+      "Awesome Go",
+      "Public Apis"
     ]
   },
   {
@@ -916,6 +1265,24 @@
     ],
     "sources": [
       "Awesome Go"
+    ]
+  },
+  {
+    "name": "MCP Servers",
+    "slug": "mcp-servers",
+    "count": 10,
+    "languages": [],
+    "sources": [
+      "Public Apis"
+    ]
+  },
+  {
+    "name": "Media",
+    "slug": "media",
+    "count": 14,
+    "languages": [],
+    "sources": [
+      "Awesome"
     ]
   },
   {
@@ -985,6 +1352,26 @@
     ]
   },
   {
+    "name": "Middlewares",
+    "slug": "middlewares",
+    "count": 13,
+    "languages": [
+      "Go"
+    ],
+    "sources": [
+      "Awesome Go"
+    ]
+  },
+  {
+    "name": "Miscellaneous",
+    "slug": "miscellaneous",
+    "count": 132,
+    "languages": [],
+    "sources": [
+      "Awesome"
+    ]
+  },
+  {
     "name": "Miscellaneous Data Structures and Algorithms",
     "slug": "miscellaneous-data-structures-and-algorithms",
     "count": 20,
@@ -1018,6 +1405,15 @@
     ]
   },
   {
+    "name": "Music",
+    "slug": "music",
+    "count": 35,
+    "languages": [],
+    "sources": [
+      "Public Apis"
+    ]
+  },
+  {
     "name": "Network Stack",
     "slug": "network-stack",
     "count": 4,
@@ -1033,11 +1429,12 @@
   {
     "name": "Networking",
     "slug": "networking",
-    "count": 89,
+    "count": 94,
     "languages": [
       "Go"
     ],
     "sources": [
+      "Awesome",
       "Awesome Go"
     ]
   },
@@ -1055,6 +1452,15 @@
     ],
     "sources": [
       "Build Your Own X"
+    ]
+  },
+  {
+    "name": "News",
+    "slug": "news",
+    "count": 26,
+    "languages": [],
+    "sources": [
+      "Public Apis"
     ]
   },
   {
@@ -1077,6 +1483,24 @@
     ],
     "sources": [
       "Awesome Go"
+    ]
+  },
+  {
+    "name": "Open Data",
+    "slug": "open-data",
+    "count": 71,
+    "languages": [],
+    "sources": [
+      "Public Apis"
+    ]
+  },
+  {
+    "name": "Open Source Projects",
+    "slug": "open-source-projects",
+    "count": 10,
+    "languages": [],
+    "sources": [
+      "Public Apis"
     ]
   },
   {
@@ -1150,6 +1574,15 @@
     ]
   },
   {
+    "name": "Patent",
+    "slug": "patent",
+    "count": 4,
+    "languages": [],
+    "sources": [
+      "Public Apis"
+    ]
+  },
+  {
     "name": "Performance",
     "slug": "performance",
     "count": 10,
@@ -1158,6 +1591,33 @@
     ],
     "sources": [
       "Awesome Go"
+    ]
+  },
+  {
+    "name": "Personality",
+    "slug": "personality",
+    "count": 27,
+    "languages": [],
+    "sources": [
+      "Public Apis"
+    ]
+  },
+  {
+    "name": "Phone",
+    "slug": "phone",
+    "count": 8,
+    "languages": [],
+    "sources": [
+      "Public Apis"
+    ]
+  },
+  {
+    "name": "Photography",
+    "slug": "photography",
+    "count": 34,
+    "languages": [],
+    "sources": [
+      "Public Apis"
     ]
   },
   {
@@ -1185,6 +1645,15 @@
     ]
   },
   {
+    "name": "Platforms",
+    "slug": "platforms",
+    "count": 55,
+    "languages": [],
+    "sources": [
+      "Awesome"
+    ]
+  },
+  {
     "name": "Processor",
     "slug": "processor",
     "count": 1,
@@ -1193,6 +1662,15 @@
     ],
     "sources": [
       "Build Your Own X"
+    ]
+  },
+  {
+    "name": "Programming",
+    "slug": "programming",
+    "count": 5,
+    "languages": [],
+    "sources": [
+      "Public Apis"
     ]
   },
   {
@@ -1221,6 +1699,15 @@
     ],
     "sources": [
       "Build Your Own X"
+    ]
+  },
+  {
+    "name": "Programming Languages",
+    "slug": "programming-languages",
+    "count": 77,
+    "languages": [],
+    "sources": [
+      "Awesome"
     ]
   },
   {
@@ -1306,6 +1793,15 @@
     ]
   },
   {
+    "name": "Related",
+    "slug": "related",
+    "count": 5,
+    "languages": [],
+    "sources": [
+      "Awesome"
+    ]
+  },
+  {
     "name": "Relational Database Drivers",
     "slug": "relational-database-drivers",
     "count": 22,
@@ -1361,6 +1857,15 @@
     ]
   },
   {
+    "name": "Science & Math",
+    "slug": "science-math",
+    "count": 49,
+    "languages": [],
+    "sources": [
+      "Public Apis"
+    ]
+  },
+  {
     "name": "Science and Data Analysis",
     "slug": "science-and-data-analysis",
     "count": 43,
@@ -1408,12 +1913,14 @@
   {
     "name": "Security",
     "slug": "security",
-    "count": 70,
+    "count": 156,
     "languages": [
       "Go"
     ],
     "sources": [
-      "Awesome Go"
+      "Awesome",
+      "Awesome Go",
+      "Public Apis"
     ]
   },
   {
@@ -1474,6 +1981,15 @@
     ]
   },
   {
+    "name": "Shopping",
+    "slug": "shopping",
+    "count": 24,
+    "languages": [],
+    "sources": [
+      "Public Apis"
+    ]
+  },
+  {
     "name": "Slugifiers",
     "slug": "slugifiers",
     "count": 3,
@@ -1482,6 +1998,24 @@
     ],
     "sources": [
       "Awesome Go"
+    ]
+  },
+  {
+    "name": "Social",
+    "slug": "social",
+    "count": 56,
+    "languages": [],
+    "sources": [
+      "Public Apis"
+    ]
+  },
+  {
+    "name": "Sports & Fitness",
+    "slug": "sports-fitness",
+    "count": 59,
+    "languages": [],
+    "sources": [
+      "Public Apis"
     ]
   },
   {
@@ -1565,6 +2099,24 @@
     ]
   },
   {
+    "name": "Test Data",
+    "slug": "test-data",
+    "count": 35,
+    "languages": [],
+    "sources": [
+      "Public Apis"
+    ]
+  },
+  {
+    "name": "Testing",
+    "slug": "testing",
+    "count": 11,
+    "languages": [],
+    "sources": [
+      "Awesome"
+    ]
+  },
+  {
     "name": "Testing Frameworks",
     "slug": "testing-frameworks",
     "count": 74,
@@ -1578,12 +2130,13 @@
   {
     "name": "Text Analysis",
     "slug": "text-analysis",
-    "count": 10,
+    "count": 29,
     "languages": [
       "Go"
     ],
     "sources": [
-      "Awesome Go"
+      "Awesome Go",
+      "Public Apis"
     ]
   },
   {
@@ -1599,6 +2152,15 @@
     ],
     "sources": [
       "Build Your Own X"
+    ]
+  },
+  {
+    "name": "Theory",
+    "slug": "theory",
+    "count": 14,
+    "languages": [],
+    "sources": [
+      "Awesome"
     ]
   },
   {
@@ -1624,6 +2186,15 @@
     ]
   },
   {
+    "name": "Tracking",
+    "slug": "tracking",
+    "count": 11,
+    "languages": [],
+    "sources": [
+      "Public Apis"
+    ]
+  },
+  {
     "name": "Translation",
     "slug": "translation",
     "count": 9,
@@ -1643,6 +2214,15 @@
     ],
     "sources": [
       "Awesome Go"
+    ]
+  },
+  {
+    "name": "Transportation",
+    "slug": "transportation",
+    "count": 89,
+    "languages": [],
+    "sources": [
+      "Public Apis"
     ]
   },
   {
@@ -1708,6 +2288,15 @@
     ]
   },
   {
+    "name": "URL Shorteners",
+    "slug": "url-shorteners",
+    "count": 21,
+    "languages": [],
+    "sources": [
+      "Public Apis"
+    ]
+  },
+  {
     "name": "Utilities",
     "slug": "utilities",
     "count": 192,
@@ -1752,6 +2341,15 @@
     ]
   },
   {
+    "name": "Vehicle",
+    "slug": "vehicle",
+    "count": 14,
+    "languages": [],
+    "sources": [
+      "Public Apis"
+    ]
+  },
+  {
     "name": "Version Control",
     "slug": "version-control",
     "count": 11,
@@ -1765,12 +2363,13 @@
   {
     "name": "Video",
     "slug": "video",
-    "count": 14,
+    "count": 70,
     "languages": [
       "Go"
     ],
     "sources": [
-      "Awesome Go"
+      "Awesome Go",
+      "Public Apis"
     ]
   },
   {
@@ -1793,6 +2392,15 @@
     ],
     "sources": [
       "Build Your Own X"
+    ]
+  },
+  {
+    "name": "Weather",
+    "slug": "weather",
+    "count": 43,
+    "languages": [],
+    "sources": [
+      "Public Apis"
     ]
   },
   {
@@ -1875,6 +2483,15 @@
     ],
     "sources": [
       "Awesome Go"
+    ]
+  },
+  {
+    "name": "Work",
+    "slug": "work",
+    "count": 7,
+    "languages": [],
+    "sources": [
+      "Awesome"
     ]
   },
   {

@@ -54,25 +54,29 @@ def fetch_repository_readme(source: Dict[str, Any], use_cache: bool = True, forc
     }
 
     last_error = None
+    filenames_to_try = ["README.md", "readme.md", "Readme.md"]
+
     for b in branches_to_try:
-        url = get_raw_url(owner, repo, b, "README.md")
-        req = urllib.request.Request(url, headers=headers)
-        try:
-            with urllib.request.urlopen(req, timeout=15) as response:
-                content = response.read().decode("utf-8")
-                # Salva no cache
-                try:
-                    with open(cache_file, "w", encoding="utf-8") as f:
-                        f.write(content)
-                except Exception:
-                    pass
-                return content
-        except urllib.error.HTTPError as e:
-            last_error = e
-            if e.code == 404:
-                continue
-            raise
-        except Exception as e:
+        for fname in filenames_to_try:
+            url = get_raw_url(owner, repo, b, fname)
+            req = urllib.request.Request(url, headers=headers)
+            try:
+                with urllib.request.urlopen(req, timeout=15) as response:
+                    content = response.read().decode("utf-8")
+                    try:
+                        with open(cache_file, "w", encoding="utf-8") as f:
+                            f.write(content)
+                    except Exception:
+                        pass
+                    return content
+            except urllib.error.HTTPError as e:
+                last_error = e
+                if e.code == 404:
+                    continue
+                raise
+            except Exception as e:
+                last_error = e
+                break
             last_error = e
             break
 

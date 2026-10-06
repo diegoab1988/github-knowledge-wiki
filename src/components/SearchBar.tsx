@@ -1,7 +1,7 @@
 "use client";
 
-import { useMemo, useState } from "react";
-import { Search, X, Filter, Code, FolderTree } from "lucide-react";
+import { useMemo, useState, useEffect } from "react";
+import { Search, X, Filter, Code, FolderTree, ChevronLeft, ChevronRight } from "lucide-react";
 import { Project } from "@/types/wiki";
 import ProjectCard from "./ProjectCard";
 
@@ -12,6 +12,8 @@ interface SearchBarProps {
   initialCategory?: string;
 }
 
+const ITEMS_PER_PAGE = 24;
+
 export default function SearchBar({
   projects,
   categories = [],
@@ -21,6 +23,12 @@ export default function SearchBar({
   const [query, setQuery] = useState("");
   const [selectedCategory, setSelectedCategory] = useState(initialCategory);
   const [selectedLanguage, setSelectedLanguage] = useState("");
+  const [currentPage, setCurrentPage] = useState(1);
+
+  // Reseta para a página 1 ao alterar os filtros
+  useEffect(() => {
+    setCurrentPage(1);
+  }, [query, selectedCategory, selectedLanguage]);
 
   const filteredProjects = useMemo(() => {
     const q = query.toLowerCase().trim();
@@ -49,12 +57,19 @@ export default function SearchBar({
     });
   }, [projects, query, selectedCategory, selectedLanguage]);
 
+  const totalPages = Math.ceil(filteredProjects.length / ITEMS_PER_PAGE) || 1;
+  const paginatedProjects = useMemo(() => {
+    const start = (currentPage - 1) * ITEMS_PER_PAGE;
+    return filteredProjects.slice(start, start + ITEMS_PER_PAGE);
+  }, [filteredProjects, currentPage]);
+
   const hasActiveFilters = Boolean(query || selectedCategory || selectedLanguage);
 
   const clearAll = () => {
     setQuery("");
     setSelectedCategory("");
     setSelectedLanguage("");
+    setCurrentPage(1);
   };
 
   return (
@@ -68,7 +83,7 @@ export default function SearchBar({
             value={query}
             onChange={(e) => setQuery(e.target.value)}
             placeholder="Buscar por tecnologia, nome do projeto, categoria ou linguagem..."
-            className="w-full rounded-lg border border-border bg-[#080d1a] pl-10 pr-10 py-2.5 text-sm text-slate-100 placeholder-slate-500 focus:border-sky-500 focus:outline-none focus:ring-1 focus:ring-sky-500 transition-colors"
+            className="w-full rounded-lg border border-border bg-[#080d1a] pl-10 pr-10 py-2.5 text-sm text-slate-100 placeholder-slate-500 focus:border-sky-500 focus:outline-none focus:ring-1 focus:ring-sky-500 transition-colors font-sans"
           />
           {query && (
             <button
@@ -89,7 +104,7 @@ export default function SearchBar({
               <select
                 value={selectedCategory}
                 onChange={(e) => setSelectedCategory(e.target.value)}
-                className="bg-transparent text-slate-300 focus:outline-none cursor-pointer text-xs"
+                className="bg-transparent text-slate-300 focus:outline-none cursor-pointer text-xs max-w-[200px] truncate"
               >
                 <option value="" className="bg-[#0b1120]">Todas as Categorias</option>
                 {categories.map((cat) => (
@@ -122,7 +137,7 @@ export default function SearchBar({
           {hasActiveFilters && (
             <button
               onClick={clearAll}
-              className="inline-flex items-center gap-1 text-sky-400 hover:text-sky-300 px-2 py-1 rounded hover:bg-sky-500/10 transition-colors"
+              className="inline-flex items-center gap-1 text-sky-400 hover:text-sky-300 px-2 py-1 rounded hover:bg-sky-500/10 transition-colors font-mono"
             >
               <X className="h-3 w-3" />
               <span>Limpar filtros</span>
@@ -138,10 +153,47 @@ export default function SearchBar({
 
       {/* Resultados da busca */}
       {filteredProjects.length > 0 ? (
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-          {filteredProjects.map((project) => (
-            <ProjectCard key={project.id} project={project} />
-          ))}
+        <div className="space-y-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            {paginatedProjects.map((project) => (
+              <ProjectCard key={project.id} project={project} />
+            ))}
+          </div>
+
+          {/* Paginação */}
+          {totalPages > 1 && (
+            <div className="flex items-center justify-between border-t border-border pt-4 text-xs font-mono">
+              <span className="text-slate-400">
+                Página <strong className="text-sky-400">{currentPage}</strong> de <strong>{totalPages}</strong> ({filteredProjects.length} resultados)
+              </span>
+
+              <div className="flex items-center gap-2">
+                <button
+                  onClick={() => {
+                    setCurrentPage((p) => Math.max(1, p - 1));
+                    window.scrollTo({ top: 120, behavior: "smooth" });
+                  }}
+                  disabled={currentPage === 1}
+                  className="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg border border-border bg-[#0b1120] text-slate-300 hover:bg-slate-800 disabled:opacity-40 disabled:cursor-not-allowed transition-colors"
+                >
+                  <ChevronLeft className="h-4 w-4" />
+                  <span>Anterior</span>
+                </button>
+
+                <button
+                  onClick={() => {
+                    setCurrentPage((p) => Math.min(totalPages, p + 1));
+                    window.scrollTo({ top: 120, behavior: "smooth" });
+                  }}
+                  disabled={currentPage === totalPages}
+                  className="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg border border-border bg-[#0b1120] text-slate-300 hover:bg-slate-800 disabled:opacity-40 disabled:cursor-not-allowed transition-colors"
+                >
+                  <span>Próxima</span>
+                  <ChevronRight className="h-4 w-4" />
+                </button>
+              </div>
+            </div>
+          )}
         </div>
       ) : (
         <div className="text-center py-16 px-4 rounded-xl border border-dashed border-border bg-[#0b1120]/50">

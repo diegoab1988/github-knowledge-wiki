@@ -1,7 +1,7 @@
 {
-  "total_sources": 2,
-  "total_projects": 3517,
-  "total_categories": 162,
+  "total_sources": 5,
+  "total_projects": 6257,
+  "total_categories": 229,
   "total_languages": 39,
   "top_languages": [
     {
@@ -85,7 +85,37 @@
       "enabled": true,
       "description": "A curated list of awesome Go frameworks, libraries and software",
       "projects_count": 3158
+    },
+    {
+      "id": "sindresorhus-awesome",
+      "name": "Awesome",
+      "owner": "sindresorhus",
+      "repository": "awesome",
+      "branch": "main",
+      "enabled": true,
+      "description": "😎 Awesome lists about all kinds of interesting topics [NOTE: Pull requests are temporarily disabled until I have a chance to catch up with the existing ones]",
+      "projects_count": 676
+    },
+    {
+      "id": "public-apis-public-apis",
+      "name": "Public Apis",
+      "owner": "public-apis",
+      "repository": "public-apis",
+      "branch": "master",
+      "enabled": true,
+      "description": "A collective list of free APIs",
+      "projects_count": 2064
+    },
+    {
+      "id": "ebookfoundation-free-programming-books",
+      "name": "Free Programming Books",
+      "owner": "EbookFoundation",
+      "repository": "free-programming-books",
+      "branch": "main",
+      "enabled": true,
+      "description": ":books: Freely available programming books",
+      "projects_count": 0
     }
   ],
-  "last_sync": "2026-10-06T13:59:54.908887+00:00"
+  "last_sync": "2026-10-06T14:48:41.725716+00:00"
 }
