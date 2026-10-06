@@ -146,7 +146,7 @@ def parse_build_your_own_x(markdown_content: str, source: Dict[str, Any]) -> Lis
 
 def parse_generic_markdown(markdown_content: str, source: Dict[str, Any]) -> List[Dict[str, Any]]:
     """
-    Parser genérico para repositórios futuros em Markdown estruturado com cabeçalhos e listas de links.
+    Parser genérico para repositórios futuros em Markdown estruturado com cabeçalhos e listas de links (ex: Awesome lists).
     """
     lines = markdown_content.splitlines()
     projects: List[Dict[str, Any]] = []
@@ -157,13 +157,24 @@ def parse_generic_markdown(markdown_content: str, source: Dict[str, Any]) -> Lis
     source_name = source.get("name", "Generic Source")
     source_repo = f"{source.get('owner', '')}/{source.get('repository', '')}".strip("/")
 
-    link_pattern = re.compile(r"\[([^\]]+)\]\((https?://[^\s\)]+)\)")
+    # Inferência básica de linguagem a partir do nome ou repositório
+    inferred_lang = None
+    repo_lower = source_repo.lower()
+    for l_cand, l_name in [("python", "Python"), ("rust", "Rust"), ("golang", "Go"), ("-go", "Go"), ("javascript", "JavaScript"), ("typescript", "TypeScript"), ("ruby", "Ruby"), ("java", "Java"), ("csharp", "C#"), ("cpp", "C++")]:
+        if l_cand in repo_lower or l_cand in source_name.lower():
+            inferred_lang = l_name
+            break
+
+    # Padrão para capturar link e eventual descrição após o link
+    link_pattern = re.compile(r"\[([^\]]+)\]\((https?://[^\s\)]+)\)(.*)")
 
     for line in lines:
         line_s = line.strip()
         if line_s.startswith("#"):
             heading = re.sub(r"^#+\s*", "", line_s).strip("`").strip()
-            if heading and not any(h in heading.lower() for h in ["license", "contribute", "author", "table of contents"]):
+            heading_lower = heading.lower()
+            # Ignora seções de navegação, licença e contribuição
+            if heading and not any(h in heading_lower for h in ["license", "licence", "contribute", "contributing", "author", "table of contents", "contents", "installation"]):
                 current_category = heading
             continue
 
@@ -172,9 +183,23 @@ def parse_generic_markdown(markdown_content: str, source: Dict[str, Any]) -> Lis
             if match:
                 title = clean_title(match.group(1))
                 url = match.group(2)
+                trailing = match.group(3).strip()
+
+                # Ignora badges e links de âncoras internas
+                if url.startswith("#") or "shields.io" in url or "travis-ci" in url:
+                    continue
+
+                # Extrai descrição se houver separador após o link (ex: " - Descrição do projeto")
+                description = ""
+                if trailing:
+                    # Remove hífens, dois pontos ou traços iniciais
+                    desc_clean = re.sub(r"^[\s\-–—:\.]+", "", trailing).strip()
+                    if desc_clean and len(desc_clean) > 3:
+                        description = desc_clean
+
                 cat_slug = slugify(current_category)
                 title_slug = slugify(title)
-                base_id = f"{cat_slug}-{title_slug}"[:60]
+                base_id = f"{source_id}-{cat_slug}-{title_slug}"[:60]
                 final_id = base_id
                 counter = 2
                 while final_id in seen_ids:
@@ -185,14 +210,18 @@ def parse_generic_markdown(markdown_content: str, source: Dict[str, Any]) -> Lis
                 is_github = "github.com" in url.lower()
                 github_url = url if is_github else f"https://github.com/{source_repo}"
 
-                # Tenta extrair linguagens caso haja marcadores
+                # Extrai linguagem explícita ou usa a inferida
                 lang_match = re.search(r"\*\*([^*]+)\*\*", line_s)
                 languages = parse_languages(lang_match.group(1)) if lang_match else []
+                if not languages and inferred_lang:
+                    languages = [inferred_lang]
+
+                tags = parse_tags(trailing)
 
                 projects.append({
                     "id": final_id,
                     "title": title,
-                    "description": "",
+                    "description": description or f"Recurso catalogado na categoria {current_category}.",
                     "category": current_category,
                     "category_slug": cat_slug,
                     "source_id": source_id,
@@ -201,7 +230,7 @@ def parse_generic_markdown(markdown_content: str, source: Dict[str, Any]) -> Lis
                     "github_url": github_url,
                     "original_url": url,
                     "languages": languages,
-                    "tags": [],
+                    "tags": tags,
                     "raw_line": line_s,
                 })
 

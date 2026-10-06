@@ -8,6 +8,15 @@
       "branch": "master",
       "description": "Master programming by recreating your favorite technologies from scratch.",
       "enabled": true
+    },
+    {
+      "id": "avelino-awesome-go",
+      "name": "Awesome Go",
+      "owner": "avelino",
+      "repository": "awesome-go",
+      "branch": "main",
+      "description": "A curated list of awesome Go frameworks, libraries and software",
+      "enabled": true
     }
   ]
 }

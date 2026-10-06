@@ -17,6 +17,40 @@
     ]
   },
   {
+    "name": "Actor Model",
+    "slug": "actor-model",
+    "count": 5,
+    "languages": [
+      "Go"
+    ],
+    "sources": [
+      "Awesome Go"
+    ]
+  },
+  {
+    "name": "Actual middlewares",
+    "slug": "actual-middlewares",
+    "count": 13,
+    "languages": [
+      "Go"
+    ],
+    "sources": [
+      "Awesome Go"
+    ]
+  },
+  {
+    "name": "Advanced Console UIs",
+    "slug": "advanced-console-uis",
+    "count": 45,
+    "languages": [
+      "Go",
+      "termbox-go"
+    ],
+    "sources": [
+      "Awesome Go"
+    ]
+  },
+  {
     "name": "AI Model",
     "slug": "ai-model",
     "count": 3,
@@ -25,6 +59,28 @@
     ],
     "sources": [
       "Build Your Own X"
+    ]
+  },
+  {
+    "name": "Artificial Intelligence",
+    "slug": "artificial-intelligence",
+    "count": 37,
+    "languages": [
+      "Go"
+    ],
+    "sources": [
+      "Awesome Go"
+    ]
+  },
+  {
+    "name": "Audio and Music",
+    "slug": "audio-and-music",
+    "count": 62,
+    "languages": [
+      "Go"
+    ],
+    "sources": [
+      "Awesome Go"
     ]
   },
   {
@@ -40,6 +96,39 @@
     ]
   },
   {
+    "name": "Benchmarks",
+    "slug": "benchmarks",
+    "count": 15,
+    "languages": [
+      "Go"
+    ],
+    "sources": [
+      "Awesome Go"
+    ]
+  },
+  {
+    "name": "Bit Sets",
+    "slug": "bit-sets",
+    "count": 2,
+    "languages": [
+      "Go"
+    ],
+    "sources": [
+      "Awesome Go"
+    ]
+  },
+  {
+    "name": "Bit-packing and Compression",
+    "slug": "bit-packing-and-compression",
+    "count": 6,
+    "languages": [
+      "Go"
+    ],
+    "sources": [
+      "Awesome Go"
+    ]
+  },
+  {
     "name": "BitTorrent Client",
     "slug": "bittorrent-client",
     "count": 5,
@@ -52,6 +141,17 @@
     ],
     "sources": [
       "Build Your Own X"
+    ]
+  },
+  {
+    "name": "Blockchain",
+    "slug": "blockchain",
+    "count": 13,
+    "languages": [
+      "Go"
+    ],
+    "sources": [
+      "Awesome Go"
     ]
   },
   {
@@ -76,6 +176,17 @@
     ]
   },
   {
+    "name": "Bloom and Cuckoo Filters",
+    "slug": "bloom-and-cuckoo-filters",
+    "count": 9,
+    "languages": [
+      "Go"
+    ],
+    "sources": [
+      "Awesome Go"
+    ]
+  },
+  {
     "name": "Bot",
     "slug": "bot",
     "count": 15,
@@ -91,6 +202,50 @@
     ]
   },
   {
+    "name": "Bot Building",
+    "slug": "bot-building",
+    "count": 18,
+    "languages": [
+      "Go"
+    ],
+    "sources": [
+      "Awesome Go"
+    ]
+  },
+  {
+    "name": "Build Automation",
+    "slug": "build-automation",
+    "count": 14,
+    "languages": [
+      "Go"
+    ],
+    "sources": [
+      "Awesome Go"
+    ]
+  },
+  {
+    "name": "Caches",
+    "slug": "caches",
+    "count": 31,
+    "languages": [
+      "Go"
+    ],
+    "sources": [
+      "Awesome Go"
+    ]
+  },
+  {
+    "name": "Code Analysis",
+    "slug": "code-analysis",
+    "count": 37,
+    "languages": [
+      "Go"
+    ],
+    "sources": [
+      "Awesome Go"
+    ]
+  },
+  {
     "name": "Command-Line Tool",
     "slug": "command-line-tool",
     "count": 9,
@@ -103,6 +258,72 @@
     ],
     "sources": [
       "Build Your Own X"
+    ]
+  },
+  {
+    "name": "Conferences",
+    "slug": "conferences",
+    "count": 15,
+    "languages": [
+      "Go"
+    ],
+    "sources": [
+      "Awesome Go"
+    ]
+  },
+  {
+    "name": "Configuration",
+    "slug": "configuration",
+    "count": 67,
+    "languages": [
+      "Go"
+    ],
+    "sources": [
+      "Awesome Go"
+    ]
+  },
+  {
+    "name": "Continuous Integration",
+    "slug": "continuous-integration",
+    "count": 17,
+    "languages": [
+      "Go"
+    ],
+    "sources": [
+      "Awesome Go"
+    ]
+  },
+  {
+    "name": "CSS Preprocessors",
+    "slug": "css-preprocessors",
+    "count": 2,
+    "languages": [
+      "Go"
+    ],
+    "sources": [
+      "Awesome Go"
+    ]
+  },
+  {
+    "name": "Data Integration Frameworks",
+    "slug": "data-integration-frameworks",
+    "count": 4,
+    "languages": [
+      "Go"
+    ],
+    "sources": [
+      "Awesome Go"
+    ]
+  },
+  {
+    "name": "Data Structure and Algorithm Collections",
+    "slug": "data-structure-and-algorithm-collections",
+    "count": 4,
+    "languages": [
+      "Go"
+    ],
+    "sources": [
+      "Awesome Go"
     ]
   },
   {
@@ -126,13 +347,81 @@
     ]
   },
   {
+    "name": "Database Schema Migration",
+    "slug": "database-schema-migration",
+    "count": 23,
+    "languages": [
+      "Go"
+    ],
+    "sources": [
+      "Awesome Go"
+    ]
+  },
+  {
+    "name": "Database Tools",
+    "slug": "database-tools",
+    "count": 28,
+    "languages": [
+      "Go"
+    ],
+    "sources": [
+      "Awesome Go"
+    ]
+  },
+  {
+    "name": "Databases Implemented in Go",
+    "slug": "databases-implemented-in-go",
+    "count": 52,
+    "languages": [
+      "Go"
+    ],
+    "sources": [
+      "Awesome Go"
+    ]
+  },
+  {
+    "name": "Date and Time",
+    "slug": "date-and-time",
+    "count": 25,
+    "languages": [
+      "Go"
+    ],
+    "sources": [
+      "Awesome Go"
+    ]
+  },
+  {
+    "name": "Dependency Injection",
+    "slug": "dependency-injection",
+    "count": 27,
+    "languages": [
+      "Go"
+    ],
+    "sources": [
+      "Awesome Go"
+    ]
+  },
+  {
+    "name": "DevOps Tools",
+    "slug": "devops-tools",
+    "count": 111,
+    "languages": [
+      "Go"
+    ],
+    "sources": [
+      "Awesome Go"
+    ]
+  },
+  {
     "name": "Distributed Systems",
     "slug": "distributed-systems",
-    "count": 1,
+    "count": 69,
     "languages": [
+      "Go",
       "Java"
     ],
     "sources": [
+      "Awesome Go",
       "Build Your Own X"
     ]
   },
@@ -148,6 +437,61 @@
     ],
     "sources": [
       "Build Your Own X"
+    ]
+  },
+  {
+    "name": "Dynamic DNS",
+    "slug": "dynamic-dns",
+    "count": 3,
+    "languages": [
+      "Go"
+    ],
+    "sources": [
+      "Awesome Go"
+    ]
+  },
+  {
+    "name": "E-books for purchase",
+    "slug": "e-books-for-purchase",
+    "count": 15,
+    "languages": [
+      "Go"
+    ],
+    "sources": [
+      "Awesome Go"
+    ]
+  },
+  {
+    "name": "Editor Plugins",
+    "slug": "editor-plugins",
+    "count": 13,
+    "languages": [
+      "Go"
+    ],
+    "sources": [
+      "Awesome Go"
+    ]
+  },
+  {
+    "name": "Email",
+    "slug": "email",
+    "count": 27,
+    "languages": [
+      "Go"
+    ],
+    "sources": [
+      "Awesome Go"
+    ]
+  },
+  {
+    "name": "Embeddable Scripting Languages",
+    "slug": "embeddable-scripting-languages",
+    "count": 24,
+    "languages": [
+      "Go"
+    ],
+    "sources": [
+      "Awesome Go"
     ]
   },
   {
@@ -167,6 +511,83 @@
     ]
   },
   {
+    "name": "Error Handling",
+    "slug": "error-handling",
+    "count": 21,
+    "languages": [
+      "Go"
+    ],
+    "sources": [
+      "Awesome Go"
+    ]
+  },
+  {
+    "name": "Fail injection",
+    "slug": "fail-injection",
+    "count": 1,
+    "languages": [
+      "Go"
+    ],
+    "sources": [
+      "Awesome Go"
+    ]
+  },
+  {
+    "name": "File Handling",
+    "slug": "file-handling",
+    "count": 29,
+    "languages": [
+      "Go"
+    ],
+    "sources": [
+      "Awesome Go"
+    ]
+  },
+  {
+    "name": "Financial",
+    "slug": "financial",
+    "count": 40,
+    "languages": [
+      "Go"
+    ],
+    "sources": [
+      "Awesome Go"
+    ]
+  },
+  {
+    "name": "Formatters",
+    "slug": "formatters",
+    "count": 8,
+    "languages": [
+      "Go"
+    ],
+    "sources": [
+      "Awesome Go"
+    ]
+  },
+  {
+    "name": "Forms",
+    "slug": "forms",
+    "count": 12,
+    "languages": [
+      "Go"
+    ],
+    "sources": [
+      "Awesome Go"
+    ]
+  },
+  {
+    "name": "Free e-books",
+    "slug": "free-e-books",
+    "count": 20,
+    "languages": [
+      "Go"
+    ],
+    "sources": [
+      "Awesome Go"
+    ]
+  },
+  {
     "name": "Front-end Framework / Library",
     "slug": "front-end-framework-library",
     "count": 14,
@@ -175,6 +596,28 @@
     ],
     "sources": [
       "Build Your Own X"
+    ]
+  },
+  {
+    "name": "Functional",
+    "slug": "functional",
+    "count": 11,
+    "languages": [
+      "Go"
+    ],
+    "sources": [
+      "Awesome Go"
+    ]
+  },
+  {
+    "name": "Fuzzing and delta-debugging/reducing/shrinking",
+    "slug": "fuzzing-and-delta-debuggingreducingshrinking",
+    "count": 2,
+    "languages": [
+      "Go"
+    ],
+    "sources": [
+      "Awesome Go"
     ]
   },
   {
@@ -198,6 +641,39 @@
     ]
   },
   {
+    "name": "Game Development",
+    "slug": "game-development",
+    "count": 27,
+    "languages": [
+      "Go"
+    ],
+    "sources": [
+      "Awesome Go"
+    ]
+  },
+  {
+    "name": "Generators",
+    "slug": "generators",
+    "count": 17,
+    "languages": [
+      "Go"
+    ],
+    "sources": [
+      "Awesome Go"
+    ]
+  },
+  {
+    "name": "Geographic",
+    "slug": "geographic",
+    "count": 18,
+    "languages": [
+      "Go"
+    ],
+    "sources": [
+      "Awesome Go"
+    ]
+  },
+  {
     "name": "Git",
     "slug": "git",
     "count": 7,
@@ -212,6 +688,248 @@
     ]
   },
   {
+    "name": "Go Compilers",
+    "slug": "go-compilers",
+    "count": 7,
+    "languages": [
+      "Go"
+    ],
+    "sources": [
+      "Awesome Go"
+    ]
+  },
+  {
+    "name": "Go Generate Tools",
+    "slug": "go-generate-tools",
+    "count": 14,
+    "languages": [
+      "Go"
+    ],
+    "sources": [
+      "Awesome Go"
+    ]
+  },
+  {
+    "name": "Go Tools",
+    "slug": "go-tools",
+    "count": 24,
+    "languages": [
+      "Go"
+    ],
+    "sources": [
+      "Awesome Go"
+    ]
+  },
+  {
+    "name": "Gophers",
+    "slug": "gophers",
+    "count": 11,
+    "languages": [
+      "Go"
+    ],
+    "sources": [
+      "Awesome Go"
+    ]
+  },
+  {
+    "name": "Goroutines",
+    "slug": "goroutines",
+    "count": 54,
+    "languages": [
+      "Go"
+    ],
+    "sources": [
+      "Awesome Go"
+    ]
+  },
+  {
+    "name": "GUI",
+    "slug": "gui",
+    "count": 31,
+    "languages": [
+      "Go"
+    ],
+    "sources": [
+      "Awesome Go"
+    ]
+  },
+  {
+    "name": "Guided Learning",
+    "slug": "guided-learning",
+    "count": 4,
+    "languages": [
+      "Go"
+    ],
+    "sources": [
+      "Awesome Go"
+    ]
+  },
+  {
+    "name": "Hardware",
+    "slug": "hardware",
+    "count": 9,
+    "languages": [
+      "Go"
+    ],
+    "sources": [
+      "Awesome Go"
+    ]
+  },
+  {
+    "name": "HTTP Clients",
+    "slug": "http-clients",
+    "count": 26,
+    "languages": [
+      "Go"
+    ],
+    "sources": [
+      "Awesome Go"
+    ]
+  },
+  {
+    "name": "Images",
+    "slug": "images",
+    "count": 45,
+    "languages": [
+      "Go"
+    ],
+    "sources": [
+      "Awesome Go"
+    ]
+  },
+  {
+    "name": "Interfaces to Multiple Backends",
+    "slug": "interfaces-to-multiple-backends",
+    "count": 6,
+    "languages": [
+      "Go"
+    ],
+    "sources": [
+      "Awesome Go"
+    ]
+  },
+  {
+    "name": "IoT (Internet of Things)",
+    "slug": "iot-internet-of-things",
+    "count": 14,
+    "languages": [
+      "Go"
+    ],
+    "sources": [
+      "Awesome Go"
+    ]
+  },
+  {
+    "name": "Iterators",
+    "slug": "iterators",
+    "count": 4,
+    "languages": [
+      "Go"
+    ],
+    "sources": [
+      "Awesome Go"
+    ]
+  },
+  {
+    "name": "Job Scheduler",
+    "slug": "job-scheduler",
+    "count": 23,
+    "languages": [
+      "Go"
+    ],
+    "sources": [
+      "Awesome Go"
+    ]
+  },
+  {
+    "name": "JSON",
+    "slug": "json",
+    "count": 41,
+    "languages": [
+      "Go"
+    ],
+    "sources": [
+      "Awesome Go"
+    ]
+  },
+  {
+    "name": "Language Detection",
+    "slug": "language-detection",
+    "count": 5,
+    "languages": [
+      "Go"
+    ],
+    "sources": [
+      "Awesome Go"
+    ]
+  },
+  {
+    "name": "Libraries for creating HTTP middlewares",
+    "slug": "libraries-for-creating-http-middlewares",
+    "count": 11,
+    "languages": [
+      "Go"
+    ],
+    "sources": [
+      "Awesome Go"
+    ]
+  },
+  {
+    "name": "Logging",
+    "slug": "logging",
+    "count": 74,
+    "languages": [
+      "Go"
+    ],
+    "sources": [
+      "Awesome Go"
+    ]
+  },
+  {
+    "name": "Machine Learning",
+    "slug": "machine-learning",
+    "count": 41,
+    "languages": [
+      "Go"
+    ],
+    "sources": [
+      "Awesome Go"
+    ]
+  },
+  {
+    "name": "Maps",
+    "slug": "maps",
+    "count": 7,
+    "languages": [
+      "Go"
+    ],
+    "sources": [
+      "Awesome Go"
+    ]
+  },
+  {
+    "name": "Markup Languages",
+    "slug": "markup-languages",
+    "count": 16,
+    "languages": [
+      "Go"
+    ],
+    "sources": [
+      "Awesome Go"
+    ]
+  },
+  {
+    "name": "Meetups",
+    "slug": "meetups",
+    "count": 65,
+    "languages": [
+      "Go"
+    ],
+    "sources": [
+      "Awesome Go"
+    ]
+  },
+  {
     "name": "Memory Allocator",
     "slug": "memory-allocator",
     "count": 1,
@@ -220,6 +938,83 @@
     ],
     "sources": [
       "Build Your Own X"
+    ]
+  },
+  {
+    "name": "Messaging",
+    "slug": "messaging",
+    "count": 60,
+    "languages": [
+      "Go"
+    ],
+    "sources": [
+      "Awesome Go"
+    ]
+  },
+  {
+    "name": "Microsoft Excel",
+    "slug": "microsoft-excel",
+    "count": 6,
+    "languages": [
+      "Go"
+    ],
+    "sources": [
+      "Awesome Go"
+    ]
+  },
+  {
+    "name": "Microsoft Office",
+    "slug": "microsoft-office",
+    "count": 1,
+    "languages": [
+      "Go"
+    ],
+    "sources": [
+      "Awesome Go"
+    ]
+  },
+  {
+    "name": "Microsoft Word",
+    "slug": "microsoft-word",
+    "count": 1,
+    "languages": [
+      "Go"
+    ],
+    "sources": [
+      "Awesome Go"
+    ]
+  },
+  {
+    "name": "Miscellaneous Data Structures and Algorithms",
+    "slug": "miscellaneous-data-structures-and-algorithms",
+    "count": 20,
+    "languages": [
+      "Go"
+    ],
+    "sources": [
+      "Awesome Go"
+    ]
+  },
+  {
+    "name": "Mock",
+    "slug": "mock",
+    "count": 23,
+    "languages": [
+      "Go"
+    ],
+    "sources": [
+      "Awesome Go"
+    ]
+  },
+  {
+    "name": "Morphological Analyzers",
+    "slug": "morphological-analyzers",
+    "count": 17,
+    "languages": [
+      "Go"
+    ],
+    "sources": [
+      "Awesome Go"
     ]
   },
   {
@@ -233,6 +1028,17 @@
     ],
     "sources": [
       "Build Your Own X"
+    ]
+  },
+  {
+    "name": "Networking",
+    "slug": "networking",
+    "count": 89,
+    "languages": [
+      "Go"
+    ],
+    "sources": [
+      "Awesome Go"
     ]
   },
   {
@@ -252,6 +1058,39 @@
     ]
   },
   {
+    "name": "NoSQL Database Drivers",
+    "slug": "nosql-database-drivers",
+    "count": 29,
+    "languages": [
+      "Go"
+    ],
+    "sources": [
+      "Awesome Go"
+    ]
+  },
+  {
+    "name": "Nullable Types",
+    "slug": "nullable-types",
+    "count": 3,
+    "languages": [
+      "Go"
+    ],
+    "sources": [
+      "Awesome Go"
+    ]
+  },
+  {
+    "name": "OpenGL",
+    "slug": "opengl",
+    "count": 6,
+    "languages": [
+      "Go"
+    ],
+    "sources": [
+      "Awesome Go"
+    ]
+  },
+  {
     "name": "Operating System",
     "slug": "operating-system",
     "count": 19,
@@ -267,6 +1106,61 @@
     ]
   },
   {
+    "name": "ORM",
+    "slug": "orm",
+    "count": 26,
+    "languages": [
+      "Go"
+    ],
+    "sources": [
+      "Awesome Go"
+    ]
+  },
+  {
+    "name": "Other Software",
+    "slug": "other-software",
+    "count": 90,
+    "languages": [
+      "Go"
+    ],
+    "sources": [
+      "Awesome Go"
+    ]
+  },
+  {
+    "name": "Package Management",
+    "slug": "package-management",
+    "count": 4,
+    "languages": [
+      "Go"
+    ],
+    "sources": [
+      "Awesome Go"
+    ]
+  },
+  {
+    "name": "Parsers/Encoders/Decoders",
+    "slug": "parsersencodersdecoders",
+    "count": 24,
+    "languages": [
+      "Go"
+    ],
+    "sources": [
+      "Awesome Go"
+    ]
+  },
+  {
+    "name": "Performance",
+    "slug": "performance",
+    "count": 10,
+    "languages": [
+      "Go"
+    ],
+    "sources": [
+      "Awesome Go"
+    ]
+  },
+  {
     "name": "Physics Engine",
     "slug": "physics-engine",
     "count": 7,
@@ -277,6 +1171,17 @@
     ],
     "sources": [
       "Build Your Own X"
+    ]
+  },
+  {
+    "name": "Pipes",
+    "slug": "pipes",
+    "count": 4,
+    "languages": [
+      "Go"
+    ],
+    "sources": [
+      "Awesome Go"
     ]
   },
   {
@@ -319,6 +1224,61 @@
     ]
   },
   {
+    "name": "Project Layout",
+    "slug": "project-layout",
+    "count": 22,
+    "languages": [
+      "Go"
+    ],
+    "sources": [
+      "Awesome Go"
+    ]
+  },
+  {
+    "name": "Query Language",
+    "slug": "query-language",
+    "count": 18,
+    "languages": [
+      "Go"
+    ],
+    "sources": [
+      "Awesome Go"
+    ]
+  },
+  {
+    "name": "Queues",
+    "slug": "queues",
+    "count": 9,
+    "languages": [
+      "Go"
+    ],
+    "sources": [
+      "Awesome Go"
+    ]
+  },
+  {
+    "name": "Reddit",
+    "slug": "reddit",
+    "count": 1,
+    "languages": [
+      "Go"
+    ],
+    "sources": [
+      "Awesome Go"
+    ]
+  },
+  {
+    "name": "Reflection",
+    "slug": "reflection",
+    "count": 9,
+    "languages": [
+      "Go"
+    ],
+    "sources": [
+      "Awesome Go"
+    ]
+  },
+  {
     "name": "Regex Engine",
     "slug": "regex-engine",
     "count": 9,
@@ -335,6 +1295,105 @@
     ]
   },
   {
+    "name": "Regular Expressions",
+    "slug": "regular-expressions",
+    "count": 6,
+    "languages": [
+      "Go"
+    ],
+    "sources": [
+      "Awesome Go"
+    ]
+  },
+  {
+    "name": "Relational Database Drivers",
+    "slug": "relational-database-drivers",
+    "count": 22,
+    "languages": [
+      "Go"
+    ],
+    "sources": [
+      "Awesome Go"
+    ]
+  },
+  {
+    "name": "Resource Embedding",
+    "slug": "resource-embedding",
+    "count": 4,
+    "languages": [
+      "Go"
+    ],
+    "sources": [
+      "Awesome Go"
+    ]
+  },
+  {
+    "name": "Routers",
+    "slug": "routers",
+    "count": 29,
+    "languages": [
+      "Go"
+    ],
+    "sources": [
+      "Awesome Go"
+    ]
+  },
+  {
+    "name": "RSS",
+    "slug": "rss",
+    "count": 1,
+    "languages": [
+      "Go"
+    ],
+    "sources": [
+      "Awesome Go"
+    ]
+  },
+  {
+    "name": "Sanitation",
+    "slug": "sanitation",
+    "count": 2,
+    "languages": [
+      "Go"
+    ],
+    "sources": [
+      "Awesome Go"
+    ]
+  },
+  {
+    "name": "Science and Data Analysis",
+    "slug": "science-and-data-analysis",
+    "count": 43,
+    "languages": [
+      "Go"
+    ],
+    "sources": [
+      "Awesome Go"
+    ]
+  },
+  {
+    "name": "Scrapers",
+    "slug": "scrapers",
+    "count": 10,
+    "languages": [
+      "Go"
+    ],
+    "sources": [
+      "Awesome Go"
+    ]
+  },
+  {
+    "name": "Search and Analytic Databases",
+    "slug": "search-and-analytic-databases",
+    "count": 9,
+    "languages": [
+      "Go"
+    ],
+    "sources": [
+      "Awesome Go"
+    ]
+  },
+  {
     "name": "Search Engine",
     "slug": "search-engine",
     "count": 6,
@@ -344,6 +1403,61 @@
     ],
     "sources": [
       "Build Your Own X"
+    ]
+  },
+  {
+    "name": "Security",
+    "slug": "security",
+    "count": 70,
+    "languages": [
+      "Go"
+    ],
+    "sources": [
+      "Awesome Go"
+    ]
+  },
+  {
+    "name": "Selenium and browser control tools",
+    "slug": "selenium-and-browser-control-tools",
+    "count": 6,
+    "languages": [
+      "Go"
+    ],
+    "sources": [
+      "Awesome Go"
+    ]
+  },
+  {
+    "name": "Serialization",
+    "slug": "serialization",
+    "count": 21,
+    "languages": [
+      "Go"
+    ],
+    "sources": [
+      "Awesome Go"
+    ]
+  },
+  {
+    "name": "Server Applications",
+    "slug": "server-applications",
+    "count": 39,
+    "languages": [
+      "Go"
+    ],
+    "sources": [
+      "Awesome Go"
+    ]
+  },
+  {
+    "name": "Sets",
+    "slug": "sets",
+    "count": 4,
+    "languages": [
+      "Go"
+    ],
+    "sources": [
+      "Awesome Go"
     ]
   },
   {
@@ -360,6 +1474,73 @@
     ]
   },
   {
+    "name": "Slugifiers",
+    "slug": "slugifiers",
+    "count": 3,
+    "languages": [
+      "Go"
+    ],
+    "sources": [
+      "Awesome Go"
+    ]
+  },
+  {
+    "name": "SQL Query Builders",
+    "slug": "sql-query-builders",
+    "count": 31,
+    "languages": [
+      "Go"
+    ],
+    "sources": [
+      "Awesome Go"
+    ]
+  },
+  {
+    "name": "Standard CLI",
+    "slug": "standard-cli",
+    "count": 56,
+    "languages": [
+      "Go"
+    ],
+    "sources": [
+      "Awesome Go"
+    ]
+  },
+  {
+    "name": "Stream Processing",
+    "slug": "stream-processing",
+    "count": 10,
+    "languages": [
+      "Go"
+    ],
+    "sources": [
+      "Awesome Go"
+    ]
+  },
+  {
+    "name": "Strings",
+    "slug": "strings",
+    "count": 10,
+    "languages": [
+      "Go",
+      "replacement fields"
+    ],
+    "sources": [
+      "Awesome Go"
+    ]
+  },
+  {
+    "name": "Style Guides",
+    "slug": "style-guides",
+    "count": 8,
+    "languages": [
+      "Go"
+    ],
+    "sources": [
+      "Awesome Go"
+    ]
+  },
+  {
     "name": "Template Engine",
     "slug": "template-engine",
     "count": 5,
@@ -370,6 +1551,39 @@
     ],
     "sources": [
       "Build Your Own X"
+    ]
+  },
+  {
+    "name": "Template Engines",
+    "slug": "template-engines",
+    "count": 20,
+    "languages": [
+      "Go"
+    ],
+    "sources": [
+      "Awesome Go"
+    ]
+  },
+  {
+    "name": "Testing Frameworks",
+    "slug": "testing-frameworks",
+    "count": 74,
+    "languages": [
+      "Go"
+    ],
+    "sources": [
+      "Awesome Go"
+    ]
+  },
+  {
+    "name": "Text Analysis",
+    "slug": "text-analysis",
+    "count": 10,
+    "languages": [
+      "Go"
+    ],
+    "sources": [
+      "Awesome Go"
     ]
   },
   {
@@ -388,9 +1602,86 @@
     ]
   },
   {
+    "name": "Third-party APIs",
+    "slug": "third-party-apis",
+    "count": 114,
+    "languages": [
+      "Go"
+    ],
+    "sources": [
+      "Awesome Go"
+    ]
+  },
+  {
+    "name": "Tokenizers",
+    "slug": "tokenizers",
+    "count": 9,
+    "languages": [
+      "Go"
+    ],
+    "sources": [
+      "Awesome Go"
+    ]
+  },
+  {
+    "name": "Translation",
+    "slug": "translation",
+    "count": 9,
+    "languages": [
+      "Go"
+    ],
+    "sources": [
+      "Awesome Go"
+    ]
+  },
+  {
+    "name": "Transliteration",
+    "slug": "transliteration",
+    "count": 4,
+    "languages": [
+      "Go"
+    ],
+    "sources": [
+      "Awesome Go"
+    ]
+  },
+  {
+    "name": "Trees",
+    "slug": "trees",
+    "count": 7,
+    "languages": [
+      "Go"
+    ],
+    "sources": [
+      "Awesome Go"
+    ]
+  },
+  {
+    "name": "Tutorials",
+    "slug": "tutorials",
+    "count": 48,
+    "languages": [
+      "Go"
+    ],
+    "sources": [
+      "Awesome Go"
+    ]
+  },
+  {
+    "name": "Twitter",
+    "slug": "twitter",
+    "count": 5,
+    "languages": [
+      "Go"
+    ],
+    "sources": [
+      "Awesome Go"
+    ]
+  },
+  {
     "name": "Uncategorized",
     "slug": "uncategorized",
-    "count": 62,
+    "count": 122,
     "languages": [
       "(any)",
       "Alloy",
@@ -412,7 +1703,74 @@
       "TypeScript"
     ],
     "sources": [
+      "Awesome Go",
       "Build Your Own X"
+    ]
+  },
+  {
+    "name": "Utilities",
+    "slug": "utilities",
+    "count": 192,
+    "languages": [
+      "Go"
+    ],
+    "sources": [
+      "Awesome Go"
+    ]
+  },
+  {
+    "name": "Utility/Miscellaneous",
+    "slug": "utilitymiscellaneous",
+    "count": 9,
+    "languages": [
+      "Go"
+    ],
+    "sources": [
+      "Awesome Go"
+    ]
+  },
+  {
+    "name": "UUID",
+    "slug": "uuid",
+    "count": 15,
+    "languages": [
+      "Go"
+    ],
+    "sources": [
+      "Awesome Go"
+    ]
+  },
+  {
+    "name": "Validation",
+    "slug": "validation",
+    "count": 18,
+    "languages": [
+      "Go"
+    ],
+    "sources": [
+      "Awesome Go"
+    ]
+  },
+  {
+    "name": "Version Control",
+    "slug": "version-control",
+    "count": 11,
+    "languages": [
+      "Go"
+    ],
+    "sources": [
+      "Awesome Go"
+    ]
+  },
+  {
+    "name": "Video",
+    "slug": "video",
+    "count": 14,
+    "languages": [
+      "Go"
+    ],
+    "sources": [
+      "Awesome Go"
     ]
   },
   {
@@ -450,6 +1808,17 @@
     ]
   },
   {
+    "name": "Web Frameworks",
+    "slug": "web-frameworks",
+    "count": 44,
+    "languages": [
+      "Go"
+    ],
+    "sources": [
+      "Awesome Go"
+    ]
+  },
+  {
     "name": "Web Server",
     "slug": "web-server",
     "count": 11,
@@ -462,6 +1831,83 @@
     ],
     "sources": [
       "Build Your Own X"
+    ]
+  },
+  {
+    "name": "WebAssembly",
+    "slug": "webassembly",
+    "count": 8,
+    "languages": [
+      "Go"
+    ],
+    "sources": [
+      "Awesome Go"
+    ]
+  },
+  {
+    "name": "Webhooks Server",
+    "slug": "webhooks-server",
+    "count": 4,
+    "languages": [
+      "Go"
+    ],
+    "sources": [
+      "Awesome Go"
+    ]
+  },
+  {
+    "name": "Websites",
+    "slug": "websites",
+    "count": 34,
+    "languages": [
+      "Go"
+    ],
+    "sources": [
+      "Awesome Go"
+    ]
+  },
+  {
+    "name": "Windows",
+    "slug": "windows",
+    "count": 4,
+    "languages": [
+      "Go"
+    ],
+    "sources": [
+      "Awesome Go"
+    ]
+  },
+  {
+    "name": "Workflow Frameworks",
+    "slug": "workflow-frameworks",
+    "count": 8,
+    "languages": [
+      "Go"
+    ],
+    "sources": [
+      "Awesome Go"
+    ]
+  },
+  {
+    "name": "XML",
+    "slug": "xml",
+    "count": 6,
+    "languages": [
+      "Go"
+    ],
+    "sources": [
+      "Awesome Go"
+    ]
+  },
+  {
+    "name": "Zero Trust",
+    "slug": "zero-trust",
+    "count": 5,
+    "languages": [
+      "Go"
+    ],
+    "sources": [
+      "Awesome Go"
     ]
   }
 ]

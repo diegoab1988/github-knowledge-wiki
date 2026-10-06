@@ -1,9 +1,13 @@
 {
-  "total_sources": 1,
-  "total_projects": 359,
-  "total_categories": 31,
-  "total_languages": 37,
+  "total_sources": 2,
+  "total_projects": 3517,
+  "total_categories": 162,
+  "total_languages": 39,
   "top_languages": [
+    {
+      "name": "Go",
+      "count": 3178
+    },
     {
       "name": "Python",
       "count": 73
@@ -19,10 +23,6 @@
     {
       "name": "C++",
       "count": 33
-    },
-    {
-      "name": "Go",
-      "count": 23
     },
     {
       "name": "Rust",
@@ -75,7 +75,17 @@
       "enabled": true,
       "description": "Master programming by recreating your favorite technologies from scratch.",
       "projects_count": 359
+    },
+    {
+      "id": "avelino-awesome-go",
+      "name": "Awesome Go",
+      "owner": "avelino",
+      "repository": "awesome-go",
+      "branch": "main",
+      "enabled": true,
+      "description": "A curated list of awesome Go frameworks, libraries and software",
+      "projects_count": 3158
     }
   ],
-  "last_sync": "2026-10-06T13:31:32.390106+00:00"
+  "last_sync": "2026-10-06T13:59:54.908887+00:00"
 }
