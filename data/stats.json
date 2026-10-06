@@ -1,0 +1,81 @@
+{
+  "total_sources": 1,
+  "total_projects": 359,
+  "total_categories": 31,
+  "total_languages": 37,
+  "top_languages": [
+    {
+      "name": "Python",
+      "count": 73
+    },
+    {
+      "name": "JavaScript",
+      "count": 55
+    },
+    {
+      "name": "C",
+      "count": 50
+    },
+    {
+      "name": "C++",
+      "count": 33
+    },
+    {
+      "name": "Go",
+      "count": 23
+    },
+    {
+      "name": "Rust",
+      "count": 17
+    },
+    {
+      "name": "C#",
+      "count": 15
+    },
+    {
+      "name": "Node.js",
+      "count": 15
+    },
+    {
+      "name": "Ruby",
+      "count": 13
+    },
+    {
+      "name": "Java",
+      "count": 10
+    },
+    {
+      "name": "Nim",
+      "count": 9
+    },
+    {
+      "name": "Haskell",
+      "count": 6
+    },
+    {
+      "name": "PHP",
+      "count": 5
+    },
+    {
+      "name": "TypeScript",
+      "count": 5
+    },
+    {
+      "name": "(any)",
+      "count": 4
+    }
+  ],
+  "sources_summary": [
+    {
+      "id": "build-your-own-x",
+      "name": "Build Your Own X",
+      "owner": "codecrafters-io",
+      "repository": "build-your-own-x",
+      "branch": "master",
+      "enabled": true,
+      "description": "Master programming by recreating your favorite technologies from scratch.",
+      "projects_count": 359
+    }
+  ],
+  "last_sync": "2026-10-06T13:31:32.390106+00:00"
+}

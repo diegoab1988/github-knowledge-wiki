@@ -1,0 +1,467 @@
+[
+  {
+    "name": "3D Renderer",
+    "slug": "3d-renderer",
+    "count": 11,
+    "languages": [
+      "C#",
+      "C++",
+      "Java",
+      "JavaScript",
+      "Pseudocode",
+      "Python",
+      "TypeScript"
+    ],
+    "sources": [
+      "Build Your Own X"
+    ]
+  },
+  {
+    "name": "AI Model",
+    "slug": "ai-model",
+    "count": 3,
+    "languages": [
+      "Python"
+    ],
+    "sources": [
+      "Build Your Own X"
+    ]
+  },
+  {
+    "name": "Augmented Reality",
+    "slug": "augmented-reality",
+    "count": 6,
+    "languages": [
+      "C#",
+      "Python"
+    ],
+    "sources": [
+      "Build Your Own X"
+    ]
+  },
+  {
+    "name": "BitTorrent Client",
+    "slug": "bittorrent-client",
+    "count": 5,
+    "languages": [
+      "C#",
+      "Go",
+      "Nim",
+      "Node.js",
+      "Python"
+    ],
+    "sources": [
+      "Build Your Own X"
+    ]
+  },
+  {
+    "name": "Blockchain / Cryptocurrency",
+    "slug": "blockchain-cryptocurrency",
+    "count": 21,
+    "languages": [
+      "ATS",
+      "Crystal",
+      "Go",
+      "Java",
+      "JavaScript",
+      "Kotlin",
+      "Python",
+      "Ruby",
+      "Rust",
+      "Scala",
+      "TypeScript"
+    ],
+    "sources": [
+      "Build Your Own X"
+    ]
+  },
+  {
+    "name": "Bot",
+    "slug": "bot",
+    "count": 15,
+    "languages": [
+      "Haskell",
+      "Node.js",
+      "Python",
+      "R",
+      "Rust"
+    ],
+    "sources": [
+      "Build Your Own X"
+    ]
+  },
+  {
+    "name": "Command-Line Tool",
+    "slug": "command-line-tool",
+    "count": 9,
+    "languages": [
+      "Go",
+      "Nim",
+      "Node.js",
+      "Rust",
+      "Zig"
+    ],
+    "sources": [
+      "Build Your Own X"
+    ]
+  },
+  {
+    "name": "Database",
+    "slug": "database",
+    "count": 13,
+    "languages": [
+      "C",
+      "C#",
+      "C++",
+      "Clojure",
+      "Crystal",
+      "Go",
+      "JavaScript",
+      "Python",
+      "Ruby",
+      "Rust"
+    ],
+    "sources": [
+      "Build Your Own X"
+    ]
+  },
+  {
+    "name": "Distributed Systems",
+    "slug": "distributed-systems",
+    "count": 1,
+    "languages": [
+      "Java"
+    ],
+    "sources": [
+      "Build Your Own X"
+    ]
+  },
+  {
+    "name": "Docker",
+    "slug": "docker",
+    "count": 6,
+    "languages": [
+      "C",
+      "Go",
+      "Python",
+      "Shell"
+    ],
+    "sources": [
+      "Build Your Own X"
+    ]
+  },
+  {
+    "name": "Emulator / Virtual Machine",
+    "slug": "emulator-virtual-machine",
+    "count": 13,
+    "languages": [
+      "C",
+      "C++",
+      "Common Lisp",
+      "JavaScript",
+      "Python",
+      "Rust"
+    ],
+    "sources": [
+      "Build Your Own X"
+    ]
+  },
+  {
+    "name": "Front-end Framework / Library",
+    "slug": "front-end-framework-library",
+    "count": 14,
+    "languages": [
+      "JavaScript"
+    ],
+    "sources": [
+      "Build Your Own X"
+    ]
+  },
+  {
+    "name": "Game",
+    "slug": "game",
+    "count": 34,
+    "languages": [
+      "C",
+      "C#",
+      "C++",
+      "Go",
+      "Java",
+      "JavaScript",
+      "Lua",
+      "Python",
+      "Ruby",
+      "Rust"
+    ],
+    "sources": [
+      "Build Your Own X"
+    ]
+  },
+  {
+    "name": "Git",
+    "slug": "git",
+    "count": 7,
+    "languages": [
+      "Haskell",
+      "JavaScript",
+      "Python",
+      "Ruby"
+    ],
+    "sources": [
+      "Build Your Own X"
+    ]
+  },
+  {
+    "name": "Memory Allocator",
+    "slug": "memory-allocator",
+    "count": 1,
+    "languages": [
+      "C"
+    ],
+    "sources": [
+      "Build Your Own X"
+    ]
+  },
+  {
+    "name": "Network Stack",
+    "slug": "network-stack",
+    "count": 4,
+    "languages": [
+      "C",
+      "Python",
+      "Ruby"
+    ],
+    "sources": [
+      "Build Your Own X"
+    ]
+  },
+  {
+    "name": "Neural Network",
+    "slug": "neural-network",
+    "count": 17,
+    "languages": [
+      "C#",
+      "F#",
+      "Go",
+      "Java",
+      "JavaScript",
+      "Python"
+    ],
+    "sources": [
+      "Build Your Own X"
+    ]
+  },
+  {
+    "name": "Operating System",
+    "slug": "operating-system",
+    "count": 19,
+    "languages": [
+      "(any)",
+      "Assembly",
+      "C",
+      "C++",
+      "Rust"
+    ],
+    "sources": [
+      "Build Your Own X"
+    ]
+  },
+  {
+    "name": "Physics Engine",
+    "slug": "physics-engine",
+    "count": 7,
+    "languages": [
+      "C",
+      "C++",
+      "JavaScript"
+    ],
+    "sources": [
+      "Build Your Own X"
+    ]
+  },
+  {
+    "name": "Processor",
+    "slug": "processor",
+    "count": 1,
+    "languages": [
+      "Verilog"
+    ],
+    "sources": [
+      "Build Your Own X"
+    ]
+  },
+  {
+    "name": "Programming Language",
+    "slug": "programming-language",
+    "count": 41,
+    "languages": [
+      "(any)",
+      "Assembly",
+      "C",
+      "C++",
+      "Elixir",
+      "F#",
+      "Go",
+      "Haskell",
+      "Java",
+      "JavaScript",
+      "OCaml",
+      "Pascal",
+      "Python",
+      "Racket",
+      "Ruby",
+      "Rust",
+      "Swift",
+      "TypeScript"
+    ],
+    "sources": [
+      "Build Your Own X"
+    ]
+  },
+  {
+    "name": "Regex Engine",
+    "slug": "regex-engine",
+    "count": 9,
+    "languages": [
+      "C",
+      "Go",
+      "JavaScript",
+      "Perl",
+      "Python",
+      "Scala"
+    ],
+    "sources": [
+      "Build Your Own X"
+    ]
+  },
+  {
+    "name": "Search Engine",
+    "slug": "search-engine",
+    "count": 6,
+    "languages": [
+      "CSS",
+      "Python"
+    ],
+    "sources": [
+      "Build Your Own X"
+    ]
+  },
+  {
+    "name": "Shell",
+    "slug": "shell",
+    "count": 7,
+    "languages": [
+      "C",
+      "Go",
+      "Rust"
+    ],
+    "sources": [
+      "Build Your Own X"
+    ]
+  },
+  {
+    "name": "Template Engine",
+    "slug": "template-engine",
+    "count": 5,
+    "languages": [
+      "JavaScript",
+      "Python",
+      "Ruby"
+    ],
+    "sources": [
+      "Build Your Own X"
+    ]
+  },
+  {
+    "name": "Text Editor",
+    "slug": "text-editor",
+    "count": 6,
+    "languages": [
+      "C",
+      "C++",
+      "Python",
+      "Ruby",
+      "Rust"
+    ],
+    "sources": [
+      "Build Your Own X"
+    ]
+  },
+  {
+    "name": "Uncategorized",
+    "slug": "uncategorized",
+    "count": 62,
+    "languages": [
+      "(any)",
+      "Alloy",
+      "C",
+      "C#",
+      "C++",
+      "Clojure",
+      "Go",
+      "Java",
+      "JavaScript",
+      "Kotlin",
+      "Lua",
+      "Nim",
+      "Node.js",
+      "PHP",
+      "Python",
+      "Ruby",
+      "Rust",
+      "TypeScript"
+    ],
+    "sources": [
+      "Build Your Own X"
+    ]
+  },
+  {
+    "name": "Visual Recognition System",
+    "slug": "visual-recognition-system",
+    "count": 2,
+    "languages": [
+      "Python"
+    ],
+    "sources": [
+      "Build Your Own X"
+    ]
+  },
+  {
+    "name": "Voxel Engine",
+    "slug": "voxel-engine",
+    "count": 1,
+    "languages": [
+      "C++"
+    ],
+    "sources": [
+      "Build Your Own X"
+    ]
+  },
+  {
+    "name": "Web Browser",
+    "slug": "web-browser",
+    "count": 2,
+    "languages": [
+      "Python",
+      "Rust"
+    ],
+    "sources": [
+      "Build Your Own X"
+    ]
+  },
+  {
+    "name": "Web Server",
+    "slug": "web-server",
+    "count": 11,
+    "languages": [
+      "C#",
+      "Node.js",
+      "PHP",
+      "Python",
+      "Ruby"
+    ],
+    "sources": [
+      "Build Your Own X"
+    ]
+  }
+]
