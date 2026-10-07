@@ -47,8 +47,12 @@ export default function SearchBar({
       // Filtro de busca textual
       if (!q) return true;
 
-      const inName = project.name.toLowerCase().includes(q);
-      const inDesc = project.description?.toLowerCase().includes(q) ?? false;
+      const inName =
+        project.name.toLowerCase().includes(q) ||
+        (project.name_pt?.toLowerCase().includes(q) ?? false);
+      const inDesc =
+        (project.description?.toLowerCase().includes(q) ?? false) ||
+        (project.description_pt?.toLowerCase().includes(q) ?? false);
       const inCat = project.category.toLowerCase().includes(q);
       const inSource = project.source.name.toLowerCase().includes(q);
       const inLang = project.languages?.some((l) => l.toLowerCase().includes(q)) ?? false;

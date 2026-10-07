@@ -1185,7 +1185,7 @@
   {
     "name": "JSON",
     "slug": "json",
-    "count": 41,
+    "count": 42,
     "languages": [
       "Go"
     ],

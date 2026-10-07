@@ -9,6 +9,9 @@ interface ProjectCardProps {
 
 export default function ProjectCard({ project, showCategory = true }: ProjectCardProps) {
   const isVideo = project.tags?.includes("video");
+  const displayName = project.name_pt || project.name;
+  const displayDesc = project.description_pt || project.description;
+  const hasDistinctPt = Boolean(project.name_pt && project.name_pt !== project.name);
 
   return (
     <div className="group relative flex flex-col justify-between rounded-xl border border-border bg-[#0f172a]/70 p-5 hover:border-sky-500/50 hover:bg-[#111c35]/80 transition-all duration-200">
@@ -45,15 +48,21 @@ export default function ProjectCard({ project, showCategory = true }: ProjectCar
           )}
         </div>
 
-        <h3 className="text-base font-semibold text-slate-100 group-hover:text-sky-300 transition-colors line-clamp-2 mb-2">
+        <h3 className="text-base font-semibold text-slate-100 group-hover:text-sky-300 transition-colors line-clamp-2 mb-1">
           <Link href={`/projects/${project.id}`} className="hover:underline">
-            {project.name}
+            {displayName}
           </Link>
         </h3>
 
-        {project.description && (
+        {hasDistinctPt && (
+          <p className="text-[11px] font-mono text-slate-400 line-clamp-1 mb-2">
+            Original: {project.name}
+          </p>
+        )}
+
+        {displayDesc && (
           <p className="text-xs text-slate-400 line-clamp-2 mb-4 leading-relaxed">
-            {project.description}
+            {displayDesc}
           </p>
         )}
       </div>

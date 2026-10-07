@@ -1,8 +1,8 @@
 """
 Módulo de interpretação de Markdown e fontes (parser.py).
 Interpreta o README e estruturas de dados dos repositórios.
-Possui suporte específico para Build Your Own X e parser genérico para outros repositórios.
-Integra tradução e enriquecimento contextual para português em scripts/wiki/translator.py.
+Garante a separação estrita entre conteúdo original e tradução (PT-BR),
+sem inventar descrições e preservando integralmente o Markdown original.
 """
 
 from __future__ import annotations
@@ -11,7 +11,7 @@ import re
 import unicodedata
 from typing import Any, Callable, Dict, List
 
-from .translator import translate_batch
+from .translator import translate_batch, translate_text
 
 
 def slugify(text: str) -> str:
@@ -72,8 +72,8 @@ def parse_tags(extra_text: str) -> List[str]:
 def parse_build_your_own_x(markdown_content: str, source: Dict[str, Any]) -> List[Dict[str, Any]]:
     """
     Parser especializado para o repositório codecrafters-io/build-your-own-x.
-    Extrai categorias, linguagens, títulos de projetos, links e tags.
-    Gera textos explicativos traduzidos e contextualizados para cada guia.
+    Extrai categorias, linguagens, títulos originais de projetos, links e tags.
+    Separa título original de título traduzido (PT-BR) e NÃO inventa descrições inexistentes na fonte.
     """
     pattern_with_lang = re.compile(
         r"^\s*[\*\-]\s+\[\*\*([^*]+)\*\*:\s*(.+?)\]\((https?://[^\s\)]+)\)(.*)$"
@@ -143,8 +143,10 @@ def parse_build_your_own_x(markdown_content: str, source: Dict[str, Any]) -> Lis
 
         project = {
             "id": final_id,
-            "title": title,
-            "description": "",  # Preenchido em lote com tradução enriquecida
+            "title": title,            # Título ORIGINAL intacto
+            "title_pt": None,          # Será preenchido com tradução
+            "description": None,       # BYOX NÃO possui descrições na fonte - não inventar
+            "description_pt": None,
             "category": current_category,
             "category_slug": cat_slug,
             "source_id": source_id,
@@ -154,37 +156,34 @@ def parse_build_your_own_x(markdown_content: str, source: Dict[str, Any]) -> Lis
             "original_url": url,
             "languages": languages,
             "tags": tags,
-            "raw_line": line_s,
+            "raw_line": line_s,        # Markdown original
+            "raw_line_pt": None,       # Markdown traduzido
         }
         projects.append(project)
 
-    # Tradução e enriquecimento dos textos explicativos
+    # Tradução derivada de títulos em lote
     if projects:
         titles = [p["title"] for p in projects]
-        translated_titles = translate_batch(titles)
-        for p, trans in zip(projects, translated_titles):
-            t_clean = trans.strip().rstrip(".")
-            t_lower = t_clean.lower()
-            action_words = [
-                "construa", "construir", "construindo", "como construir", "como criar",
-                "crie", "criando", "implemente", "implementando", "desenvolva", "desenvolvendo",
-                "escreva", "escrevendo", "guia", "tutorial", "aprenda", "passo a passo"
-            ]
-            if any(t_lower.startswith(w) for w in action_words):
-                p["description"] = f"{t_clean}."
-            elif t_lower.startswith("um ") or t_lower.startswith("uma ") or t_lower.startswith("o ") or t_lower.startswith("a "):
-                p["description"] = f"Guia de implementação: {t_clean}."
-            else:
-                cat = p["category"]
-                p["description"] = f"Aprenda a construir {t_clean} do zero ({cat})."
+        translated_titles = translate_batch(titles, target_lang="pt-BR")
 
-        return projects
+        for p, trans_title in zip(projects, translated_titles):
+            if trans_title and trans_title.strip() != p["title"]:
+                p["title_pt"] = trans_title.strip()
+
+                raw = p["raw_line"]
+                if f"_{p['title']}_" in raw:
+                    p["raw_line_pt"] = raw.replace(f"_{p['title']}_", f"_{p['title_pt']}_")
+                elif p["title"] in raw:
+                    p["raw_line_pt"] = raw.replace(p["title"], p["title_pt"])
+
+    return projects
 
 
 def parse_generic_markdown(markdown_content: str, source: Dict[str, Any]) -> List[Dict[str, Any]]:
     """
-    Parser genérico para repositórios futuros em Markdown estruturado com cabeçalhos e listas de links (ex: Awesome lists).
-    Traduz descrições e títulos para português de forma limpa.
+    Parser genérico para repositórios futuros em Markdown estruturado com cabeçalhos,
+    listas de links (Awesome lists) ou tabelas.
+    Mantém descrição original e traduzida estritamente separadas.
     """
     lines = markdown_content.splitlines()
     projects: List[Dict[str, Any]] = []
@@ -198,7 +197,11 @@ def parse_generic_markdown(markdown_content: str, source: Dict[str, Any]) -> Lis
 
     inferred_lang = None
     repo_lower = source_repo.lower()
-    for l_cand, l_name in [("python", "Python"), ("rust", "Rust"), ("golang", "Go"), ("-go", "Go"), ("javascript", "JavaScript"), ("typescript", "TypeScript"), ("ruby", "Ruby"), ("java", "Java"), ("csharp", "C#"), ("cpp", "C++")]:
+    for l_cand, l_name in [
+        ("python", "Python"), ("rust", "Rust"), ("golang", "Go"), ("-go", "Go"),
+        ("javascript", "JavaScript"), ("typescript", "TypeScript"), ("ruby", "Ruby"),
+        ("java", "Java"), ("csharp", "C#"), ("cpp", "C++")
+    ]:
         if l_cand in repo_lower or l_cand in source_name.lower():
             inferred_lang = l_name
             break
@@ -275,16 +278,19 @@ def parse_generic_markdown(markdown_content: str, source: Dict[str, Any]) -> Lis
         if not languages and inferred_lang:
             languages = [inferred_lang]
 
+        orig_desc = description.strip() if description else None
+
         p_idx = len(projects)
-        if description:
-            raw_descriptions.append(description)
+        if orig_desc:
+            raw_descriptions.append(orig_desc)
             indices_to_translate.append(p_idx)
 
-        fallback_desc = f"Biblioteca e recurso em {inferred_lang or 'código'} para {current_category}."
         projects.append({
             "id": final_id,
-            "title": title,
-            "description": description or fallback_desc,
+            "title": title,                # Título ORIGINAL
+            "title_pt": None,              # Título traduzido derivado
+            "description": orig_desc,      # ORIGINAL real ou None (NUNCA inventada)
+            "description_pt": None,        # Tradução derivada se houver descrição original
             "category": current_category,
             "category_slug": cat_slug,
             "source_id": source_id,
@@ -295,14 +301,37 @@ def parse_generic_markdown(markdown_content: str, source: Dict[str, Any]) -> Lis
             "languages": languages,
             "tags": tags,
             "raw_line": line_s,
+            "raw_line_pt": None,
         })
 
-    # Tradução em lote das descrições do repositório
+    # Tradução em lote das descrições reais encontradas
     if raw_descriptions:
-        translated_descs = translate_batch(raw_descriptions)
+        translated_descs = translate_batch(raw_descriptions, target_lang="pt-BR")
         for p_idx, trans in zip(indices_to_translate, translated_descs):
-            if trans:
-                projects[p_idx]["description"] = trans
+            if trans and trans.strip() != projects[p_idx]["description"]:
+                projects[p_idx]["description_pt"] = trans.strip()
+
+    # Tradução em lote de títulos compostos quando relevante
+    titles_to_translate = [p["title"] for p in projects if len(p["title"].split()) > 2]
+    if titles_to_translate:
+        trans_titles = translate_batch(titles_to_translate, target_lang="pt-BR")
+        t_iter = iter(trans_titles)
+        for p in projects:
+            if len(p["title"].split()) > 2:
+                t_val = next(t_iter, None)
+                if t_val and t_val.strip() != p["title"]:
+                    p["title_pt"] = t_val.strip()
+
+    # Gera representação markdown traduzida substituindo com segurança o conteúdo linguístico
+    for p in projects:
+        raw = p["raw_line"]
+        modified = raw
+        if p["title_pt"] and p["title"] in modified:
+            modified = modified.replace(p["title"], p["title_pt"])
+        if p["description"] and p["description_pt"] and p["description"] in modified:
+            modified = modified.replace(p["description"], p["description_pt"])
+        if modified != raw:
+            p["raw_line_pt"] = modified
 
     return projects
 

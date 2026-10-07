@@ -102,7 +102,7 @@ def add_source(repo_url: str) -> Dict[str, Any]:
         "repository": repository,
         "branch": metadata["branch"],
         "description": metadata["description"],
-        "enabled": true if "true" in globals() else True,
+        "enabled": True,
     }
 
     if existing_index is not None:

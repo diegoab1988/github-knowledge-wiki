@@ -17,19 +17,29 @@ export interface Reference {
 export interface Project {
   id: string;
   name: string;
+  name_pt?: string;
+
   category: string;
   category_slug: string;
+
   description?: string;
+  description_pt?: string;
+
   source: {
     id: string;
     name: string;
     repository: string;
   };
+
   original_url: string;
   github_url?: string;
+
   languages?: string[];
   tags?: string[];
+
   markdown_content?: string;
+  markdown_content_pt?: string;
+
   references?: Reference[];
 }
 

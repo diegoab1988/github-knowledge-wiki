@@ -1,12 +1,12 @@
 {
   "total_sources": 5,
-  "total_projects": 6257,
+  "total_projects": 6258,
   "total_categories": 229,
   "total_languages": 39,
   "top_languages": [
     {
       "name": "Go",
-      "count": 3178
+      "count": 3179
     },
     {
       "name": "Python",
@@ -84,7 +84,7 @@
       "branch": "main",
       "enabled": true,
       "description": "A curated list of awesome Go frameworks, libraries and software",
-      "projects_count": 3158
+      "projects_count": 3159
     },
     {
       "id": "sindresorhus-awesome",
@@ -117,5 +117,5 @@
       "projects_count": 0
     }
   ],
-  "last_sync": "2026-10-06T14:48:41.725716+00:00"
+  "last_sync": "2026-10-06T19:27:45.868098+00:00"
 }
