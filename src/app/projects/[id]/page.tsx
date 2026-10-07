@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ArrowLeft, FolderTree } from "lucide-react";
-import { getProjectById, getProjects, getProjectsByCategory } from "@/lib/wiki";
+import { getProjectById, getProjects, getRelatedProjects } from "@/lib/wiki";
 import ProjectCard from "@/components/ProjectCard";
 import ProjectDetailViewer from "@/components/ProjectDetailViewer";
 
@@ -23,9 +23,7 @@ export default function ProjectDetailPage({ params }: ProjectPageProps) {
     notFound();
   }
 
-  const relatedProjects = getProjectsByCategory(project.category_slug)
-    .filter((p) => p.id !== project.id)
-    .slice(0, 3);
+  const relatedProjects = getRelatedProjects(project, 3);
 
   return (
     <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 pt-8 space-y-8">

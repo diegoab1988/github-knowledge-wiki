@@ -1,11 +1,19 @@
 import Link from "next/link";
-import { ExternalLink, ArrowRight, Code, Video, BookOpen, Tag } from "lucide-react";
-import { Project } from "@/types/wiki";
+import { ExternalLink, ArrowRight, Code, Video, Star, Layers } from "lucide-react";
+import { Project, ProjectStatus } from "@/types/wiki";
 
 interface ProjectCardProps {
   project: Project;
   showCategory?: boolean;
 }
+
+const STATUS_CONFIG: Record<ProjectStatus, { label: string; badgeClass: string }> = {
+  active: { label: "Ativo", badgeClass: "bg-emerald-500/10 text-emerald-400 border-emerald-500/20" },
+  development: { label: "Em Dev", badgeClass: "bg-blue-500/10 text-blue-400 border-blue-500/20" },
+  study: { label: "Estudo", badgeClass: "bg-purple-500/10 text-purple-400 border-purple-500/20" },
+  experimental: { label: "Experimental", badgeClass: "bg-amber-500/10 text-amber-400 border-amber-500/20" },
+  archived: { label: "Arquivado", badgeClass: "bg-slate-700/30 text-slate-400 border-slate-700/50" },
+};
 
 export default function ProjectCard({ project, showCategory = true }: ProjectCardProps) {
   const isVideo = project.tags?.includes("video");
@@ -13,10 +21,28 @@ export default function ProjectCard({ project, showCategory = true }: ProjectCar
   const displayDesc = project.description_pt || project.description;
   const hasDistinctPt = Boolean(project.name_pt && project.name_pt !== project.name);
 
+  // Status visual
+  const statusInfo = project.status ? STATUS_CONFIG[project.status] : null;
+
+  // Tecnologias adicionais além das linguagens já renderizadas
+  const existingLangsLower = new Set((project.languages || []).map((l) => l.toLowerCase()));
+  const extraTechs: string[] = [];
+  if (project.tech_stack) {
+    Object.values(project.tech_stack).forEach((list) => {
+      if (Array.isArray(list)) {
+        list.forEach((t) => {
+          if (!existingLangsLower.has(t.toLowerCase()) && !extraTechs.includes(t)) {
+            extraTechs.push(t);
+          }
+        });
+      }
+    });
+  }
+
   return (
     <div className="group relative flex flex-col justify-between rounded-xl border border-border bg-[#0f172a]/70 p-5 hover:border-sky-500/50 hover:bg-[#111c35]/80 transition-all duration-200">
       <div>
-        <div className="flex flex-wrap items-center gap-2 mb-3">
+        <div className="flex flex-wrap items-center gap-1.5 mb-3">
           {showCategory && (
             <Link
               href={`/categories/${project.category_slug}`}
@@ -24,6 +50,14 @@ export default function ProjectCard({ project, showCategory = true }: ProjectCar
             >
               {project.category}
             </Link>
+          )}
+
+          {statusInfo && (
+            <span
+              className={`inline-flex items-center text-[10px] font-mono px-1.5 py-0.5 rounded border ${statusInfo.badgeClass}`}
+            >
+              {statusInfo.label}
+            </span>
           )}
 
           {project.languages && project.languages.length > 0 && (
@@ -39,6 +73,16 @@ export default function ProjectCard({ project, showCategory = true }: ProjectCar
               ))}
             </div>
           )}
+
+          {extraTechs.slice(0, 2).map((tech) => (
+            <span
+              key={tech}
+              className="inline-flex items-center gap-1 text-[10px] font-mono px-1.5 py-0.5 rounded bg-[#131d36] text-sky-300 border border-sky-900/40"
+            >
+              <Layers className="h-2 w-2 text-sky-400" />
+              {tech}
+            </span>
+          ))}
 
           {isVideo && (
             <span className="inline-flex items-center gap-1 text-[11px] font-mono px-2 py-0.5 rounded bg-amber-500/10 text-amber-400 border border-amber-500/20">

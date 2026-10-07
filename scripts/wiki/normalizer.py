@@ -8,6 +8,8 @@ from __future__ import annotations
 
 from typing import Any, Dict, List
 
+from .enricher import enrich_project
+
 
 def normalize_project(raw: Dict[str, Any]) -> Dict[str, Any]:
     """
@@ -66,6 +68,9 @@ def normalize_project(raw: Dict[str, Any]) -> Dict[str, Any]:
 
     if references:
         item["references"] = references
+
+    # Enriquecimento com metadados determinísticos, tech_stack e status
+    item = enrich_project(item)
 
     return item
 

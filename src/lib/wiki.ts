@@ -62,3 +62,65 @@ export function getProjectsBySource(sourceId: string): Project[] {
   const projects = getProjects();
   return projects.filter((p) => p.source.id === sourceId);
 }
+
+export function getRelatedProjects(target: Project, limit: number = 3): Project[] {
+  const allProjects = getProjects();
+  const otherProjects = allProjects.filter((p) => p.id !== target.id);
+
+  const targetLangs = new Set(target.languages || []);
+  const targetTags = new Set(target.tags || []);
+  const targetTopics = new Set(target.metadata?.topics || []);
+
+  const targetTechs = new Set<string>();
+  if (target.tech_stack) {
+    Object.values(target.tech_stack).forEach((list) => {
+      if (Array.isArray(list)) list.forEach((t) => targetTechs.add(t.toLowerCase()));
+    });
+  }
+
+  const scored = otherProjects.map((p) => {
+    let score = 0;
+    // Categoria compartilhada
+    if (p.category_slug === target.category_slug) {
+      score += 3;
+    }
+    // Linguagens compartilhadas
+    if (p.languages) {
+      p.languages.forEach((l) => {
+        if (targetLangs.has(l)) score += 2;
+      });
+    }
+    // Tecnologias compartilhadas na stack
+    if (p.tech_stack) {
+      Object.values(p.tech_stack).forEach((list) => {
+        if (Array.isArray(list)) {
+          list.forEach((t) => {
+            if (targetTechs.has(t.toLowerCase())) score += 2;
+          });
+        }
+      });
+    }
+    // Tags / Topics compartilhados
+    if (p.tags) {
+      p.tags.forEach((t) => {
+        if (targetTags.has(t)) score += 1;
+      });
+    }
+    if (p.metadata?.topics) {
+      p.metadata.topics.forEach((t) => {
+        if (targetTopics.has(t)) score += 1;
+      });
+    }
+
+    return { project: p, score };
+  });
+
+  scored.sort((a, b) => b.score - a.score);
+  const relevant = scored.filter((s) => s.score > 0).slice(0, limit).map((s) => s.project);
+  if (relevant.length > 0) return relevant;
+
+  // Fallback: mesma categoria se nenhum critério de score atingir
+  return getProjectsByCategory(target.category_slug)
+    .filter((p) => p.id !== target.id)
+    .slice(0, limit);
+}

@@ -10,6 +10,7 @@ import sys
 from pathlib import Path
 from typing import Any, Dict, List, Set
 
+from .enricher import fetch_github_metadata
 from .fetcher import fetch_repository_readme
 from .generator import generate_wiki_data
 from .normalizer import normalize_all
@@ -102,6 +103,15 @@ def sync_all(force_refresh: bool = False) -> None:
         source_id = source.get("id", "")
 
         try:
+            # Pre-cache GitHub metadata da fonte
+            s_owner = source.get("owner", "")
+            s_repo = source.get("repository", "")
+            if s_owner and s_repo:
+                try:
+                    fetch_github_metadata(s_owner, s_repo, fetch_if_missing=True)
+                except Exception:
+                    pass
+
             # 1. Fetch README
             readme_content = fetch_repository_readme(source, force_refresh=force_refresh)
 

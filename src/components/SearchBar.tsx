@@ -23,12 +23,13 @@ export default function SearchBar({
   const [query, setQuery] = useState("");
   const [selectedCategory, setSelectedCategory] = useState(initialCategory);
   const [selectedLanguage, setSelectedLanguage] = useState("");
+  const [selectedStatus, setSelectedStatus] = useState("");
   const [currentPage, setCurrentPage] = useState(1);
 
   // Reseta para a página 1 ao alterar os filtros
   useEffect(() => {
     setCurrentPage(1);
-  }, [query, selectedCategory, selectedLanguage]);
+  }, [query, selectedCategory, selectedLanguage, selectedStatus]);
 
   const filteredProjects = useMemo(() => {
     const q = query.toLowerCase().trim();
@@ -44,22 +45,42 @@ export default function SearchBar({
         return false;
       }
 
-      // Filtro de busca textual
+      // Filtro de status
+      if (selectedStatus && project.status !== selectedStatus) {
+        return false;
+      }
+
+      // Filtro de busca textual multi-termo
       if (!q) return true;
 
-      const inName =
-        project.name.toLowerCase().includes(q) ||
-        (project.name_pt?.toLowerCase().includes(q) ?? false);
-      const inDesc =
-        (project.description?.toLowerCase().includes(q) ?? false) ||
-        (project.description_pt?.toLowerCase().includes(q) ?? false);
-      const inCat = project.category.toLowerCase().includes(q);
-      const inSource = project.source.name.toLowerCase().includes(q);
-      const inLang = project.languages?.some((l) => l.toLowerCase().includes(q)) ?? false;
+      const tokens = q.split(/\s+/).filter(Boolean);
+      if (tokens.length === 0) return true;
 
-      return inName || inDesc || inCat || inSource || inLang;
+      // Coleta todas as strings indexáveis do projeto
+      const searchableTexts: string[] = [
+        project.name,
+        project.name_pt || "",
+        project.description || "",
+        project.description_pt || "",
+        project.category,
+        project.source.name,
+        ...(project.languages || []),
+        ...(project.tags || []),
+        ...(project.metadata?.topics || []),
+      ];
+
+      if (project.tech_stack) {
+        Object.values(project.tech_stack).forEach((list) => {
+          if (Array.isArray(list)) searchableTexts.push(...list);
+        });
+      }
+
+      const combinedLower = searchableTexts.join(" ").toLowerCase();
+
+      // Todos os tokens precisam dar match em algum atributo do projeto (ex: "python docker")
+      return tokens.every((token) => combinedLower.includes(token));
     });
-  }, [projects, query, selectedCategory, selectedLanguage]);
+  }, [projects, query, selectedCategory, selectedLanguage, selectedStatus]);
 
   const totalPages = Math.ceil(filteredProjects.length / ITEMS_PER_PAGE) || 1;
   const paginatedProjects = useMemo(() => {
@@ -67,12 +88,13 @@ export default function SearchBar({
     return filteredProjects.slice(start, start + ITEMS_PER_PAGE);
   }, [filteredProjects, currentPage]);
 
-  const hasActiveFilters = Boolean(query || selectedCategory || selectedLanguage);
+  const hasActiveFilters = Boolean(query || selectedCategory || selectedLanguage || selectedStatus);
 
   const clearAll = () => {
     setQuery("");
     setSelectedCategory("");
     setSelectedLanguage("");
+    setSelectedStatus("");
     setCurrentPage(1);
   };
 
@@ -137,6 +159,23 @@ export default function SearchBar({
               </select>
             </div>
           )}
+
+          {/* Filtro de Status */}
+          <div className="flex items-center gap-1.5 bg-[#080d1a] border border-border rounded-lg px-2.5 py-1.5">
+            <Filter className="h-3.5 w-3.5 text-sky-400" />
+            <select
+              value={selectedStatus}
+              onChange={(e) => setSelectedStatus(e.target.value)}
+              className="bg-transparent text-slate-300 focus:outline-none cursor-pointer text-xs"
+            >
+              <option value="" className="bg-[#0b1120]">Todos os Status</option>
+              <option value="active" className="bg-[#0b1120]">Ativo</option>
+              <option value="study" className="bg-[#0b1120]">Estudo / Tutorial</option>
+              <option value="development" className="bg-[#0b1120]">Em Desenvolvimento</option>
+              <option value="archived" className="bg-[#0b1120]">Arquivado</option>
+              <option value="experimental" className="bg-[#0b1120]">Experimental</option>
+            </select>
+          </div>
 
           {hasActiveFilters && (
             <button

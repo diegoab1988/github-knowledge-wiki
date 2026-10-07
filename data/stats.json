@@ -3,6 +3,7 @@
   "total_projects": 6258,
   "total_categories": 229,
   "total_languages": 39,
+  "total_technologies": 53,
   "top_languages": [
     {
       "name": "Go",
@@ -65,6 +66,94 @@
       "count": 4
     }
   ],
+  "top_technologies": [
+    {
+      "name": "Go",
+      "count": 3179
+    },
+    {
+      "name": "Operating System",
+      "count": 233
+    },
+    {
+      "name": "Graphics / 3D",
+      "count": 209
+    },
+    {
+      "name": "Database",
+      "count": 205
+    },
+    {
+      "name": "Blockchain",
+      "count": 147
+    },
+    {
+      "name": "Machine Learning",
+      "count": 113
+    },
+    {
+      "name": "Compiler / Interpreter",
+      "count": 73
+    },
+    {
+      "name": "Python",
+      "count": 73
+    },
+    {
+      "name": "Git",
+      "count": 61
+    },
+    {
+      "name": "JavaScript",
+      "count": 55
+    },
+    {
+      "name": "C",
+      "count": 50
+    },
+    {
+      "name": "C++",
+      "count": 33
+    },
+    {
+      "name": "Docker",
+      "count": 18
+    },
+    {
+      "name": "Rust",
+      "count": 17
+    },
+    {
+      "name": "C#",
+      "count": 15
+    },
+    {
+      "name": "Node.js",
+      "count": 15
+    },
+    {
+      "name": "Ruby",
+      "count": 13
+    },
+    {
+      "name": "React",
+      "count": 12
+    },
+    {
+      "name": "HTTP / Web Server",
+      "count": 11
+    },
+    {
+      "name": "Java",
+      "count": 10
+    }
+  ],
+  "status_counts": {
+    "study": 6247,
+    "archived": 1,
+    "active": 9,
+    "development": 1
+  },
   "sources_summary": [
     {
       "id": "build-your-own-x",
@@ -117,5 +206,5 @@
       "projects_count": 0
     }
   ],
-  "last_sync": "2026-10-06T19:27:45.868098+00:00"
+  "last_sync": "2026-10-07T13:37:45.779761+00:00"
 }

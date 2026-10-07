@@ -60,11 +60,25 @@ def generate_stats(
 ) -> Dict[str, Any]:
     """Gera estatísticas globais para a página inicial e métricas da wiki."""
     all_langs: Dict[str, int] = {}
+    all_techs: Dict[str, int] = {}
     sources_count: Dict[str, int] = {}
+    status_counts: Dict[str, int] = {}
 
     for p in projects:
         for lang in p.get("languages", []):
             all_langs[lang] = all_langs.get(lang, 0) + 1
+
+        # Conta status
+        st = p.get("status", "study")
+        status_counts[st] = status_counts.get(st, 0) + 1
+
+        # Conta tecnologias da stack
+        stack = p.get("tech_stack", {})
+        if isinstance(stack, dict):
+            for sec, tech_list in stack.items():
+                if isinstance(tech_list, list):
+                    for tech in tech_list:
+                        all_techs[tech] = all_techs.get(tech, 0) + 1
 
         src_id = p.get("source", {}).get("id", "")
         if src_id:
@@ -73,6 +87,11 @@ def generate_stats(
     top_languages = [
         {"name": k, "count": v}
         for k, v in sorted(all_langs.items(), key=lambda x: (-x[1], x[0].lower()))
+    ]
+
+    top_technologies = [
+        {"name": k, "count": v}
+        for k, v in sorted(all_techs.items(), key=lambda x: (-x[1], x[0].lower()))
     ]
 
     sources_summary = []
@@ -94,7 +113,10 @@ def generate_stats(
         "total_projects": len(projects),
         "total_categories": len(categories),
         "total_languages": len(top_languages),
+        "total_technologies": len(top_technologies),
         "top_languages": top_languages[:15],
+        "top_technologies": top_technologies[:20],
+        "status_counts": status_counts,
         "sources_summary": sources_summary,
         "last_sync": datetime.now(timezone.utc).isoformat(),
     }

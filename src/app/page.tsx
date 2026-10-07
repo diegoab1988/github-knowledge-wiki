@@ -117,27 +117,50 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Top Linguagens / Tecnologias */}
-      {stats.top_languages && stats.top_languages.length > 0 && (
-        <section className="space-y-3">
-          <h2 className="text-sm font-mono uppercase tracking-wider text-slate-400">
-            Principais Linguagens &amp; Tecnologias
-          </h2>
-          <div className="flex flex-wrap gap-2">
-            {stats.top_languages.slice(0, 12).map((lang) => (
-              <Link
-                key={lang.name}
-                href={`/projects?search=${encodeURIComponent(lang.name)}`}
-                className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-mono bg-slate-900/80 border border-border hover:border-sky-500/50 hover:bg-slate-800 transition-colors"
-              >
-                <Code className="h-3 w-3 text-sky-400" />
-                <span className="text-slate-200">{lang.name}</span>
-                <span className="text-slate-500 font-semibold">{lang.count}</span>
-              </Link>
-            ))}
-          </div>
-        </section>
-      )}
+      {/* Top Linguagens & Tecnologias */}
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+        {stats.top_languages && stats.top_languages.length > 0 && (
+          <section className="space-y-3">
+            <h2 className="text-xs font-mono uppercase tracking-wider text-slate-400 flex items-center gap-1.5">
+              <Code className="h-3.5 w-3.5 text-sky-400" />
+              <span>Principais Linguagens</span>
+            </h2>
+            <div className="flex flex-wrap gap-2">
+              {stats.top_languages.slice(0, 10).map((lang) => (
+                <Link
+                  key={lang.name}
+                  href={`/projects?search=${encodeURIComponent(lang.name)}`}
+                  className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-mono bg-slate-900/80 border border-border hover:border-sky-500/50 hover:bg-slate-800 transition-colors"
+                >
+                  <span className="text-slate-200">{lang.name}</span>
+                  <span className="text-slate-500 font-semibold">{lang.count}</span>
+                </Link>
+              ))}
+            </div>
+          </section>
+        )}
+
+        {stats.top_technologies && stats.top_technologies.length > 0 && (
+          <section className="space-y-3">
+            <h2 className="text-xs font-mono uppercase tracking-wider text-slate-400 flex items-center gap-1.5">
+              <Layers className="h-3.5 w-3.5 text-sky-400" />
+              <span>Tecnologias &amp; Sistemas Detectados</span>
+            </h2>
+            <div className="flex flex-wrap gap-2">
+              {stats.top_technologies.slice(0, 10).map((tech) => (
+                <Link
+                  key={tech.name}
+                  href={`/projects?search=${encodeURIComponent(tech.name)}`}
+                  className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-mono bg-[#0f172a] border border-border hover:border-sky-500/50 hover:bg-slate-800 transition-colors"
+                >
+                  <span className="text-sky-300">{tech.name}</span>
+                  <span className="text-slate-500 font-semibold">{tech.count}</span>
+                </Link>
+              ))}
+            </div>
+          </section>
+        )}
+      </div>
 
       {/* Categorias em Destaque */}
       <section className="space-y-4">
